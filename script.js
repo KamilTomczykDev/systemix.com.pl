@@ -29,21 +29,21 @@ document.querySelector(".learnMore").addEventListener("click", function (e) {
 
 //STICKY NAV
 
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) {
-    nav.style.position = "fixed";
-  } else {
-    nav.style.position = "absolute";
-  }
-};
+// const stickyNav = function (entries) {
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) {
+//     nav.style.position = "fixed";
+//   } else {
+//     nav.style.position = "static";
+//   }
+// };
 
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${navHeight}px`,
-});
-headerObserver.observe(header);
+// const headerObserver = new IntersectionObserver(stickyNav, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: `-${navHeight}px`,
+// });
+// headerObserver.observe(header);
 
 //Reveal sections
 

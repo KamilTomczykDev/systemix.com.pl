@@ -18,14 +18,16 @@ body {
 .header {
   width: 100%;
   position: relative;
-  height: auto;
+  height: 100vh;
 }
 
 nav {
   height: 105px;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.6s, position 0.6s;
+  background-color: #f2f2f2;
+  transition: background-color 0.6s;
+  position: fixed;
 }
 nav:hover {
   background-color: #ffffff;
@@ -131,8 +133,28 @@ a.active {
   height: 100vh;
   display: flex;
   justify-items: center;
-  background-image: url(img/slider1.jpg);
-  background-repeat: no-repeat;
+  background: url(img/slider1.png);
+  background-size: cover;
+  z-index: 999;
+  position: relative;
+  animation: animate 15s infinite;
+}
+
+@keyframes animate {
+  50% {
+    background: url(img/slider2.png);
+    background-size: cover;
+  }
+  100% {
+    background: url(img/slider1.png);
+    background-size: cover;
+  }
+}
+
+.header__background {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
 }
 
 .lowHeaderLeft {
@@ -142,6 +164,7 @@ a.active {
   justify-content: center;
   align-items: center;
   transition: all 2s;
+  padding-top: 150px;
 }
 
 .header .minusPlus {
@@ -163,7 +186,7 @@ a.active {
 }
 
 .header h1 {
-  color: #4b4b4b;
+  color: #414141;
   font-size: 100px;
   font-family: Poppins;
   font-weight: 700;
@@ -171,7 +194,7 @@ a.active {
 }
 
 .header h2 {
-  color: #4b4b4b;
+  color: #414141;
   font-size: 40px;
   font-family: Poppins;
   font-weight: 700;
@@ -196,7 +219,7 @@ a.active {
 .header .logoSystemix {
   width: 90%;
   position: absolute;
-  bottom: 150px;
+  bottom: 50px;
 }
 
 .img1 {
