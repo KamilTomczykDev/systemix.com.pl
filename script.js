@@ -1,5 +1,6 @@
 const firstSection = document.querySelector("#firstSection");
 const nav = document.querySelector("nav");
+const footerNav = document.querySelector(".footer--nav");
 const allSections = document.querySelectorAll(".reveal__section");
 const header = document.querySelector(".header");
 const navHeight = nav.getBoundingClientRect().height;
@@ -9,7 +10,7 @@ const tabsContent = document.querySelectorAll(".operations__content");
 
 //Smooth Loading left side of nav
 
-const lowHeaderLeft = document.querySelector(".lowHeaderLeft");
+const lowHeaderLeft = document.querySelector(".low-header--content");
 console.log(lowHeaderLeft);
 
 window.addEventListener("load", function () {
@@ -24,7 +25,15 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
   }
 });
 
-document.querySelector(".learnMore").addEventListener("click", function (e) {
+footerNav.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains("nav_link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+document.querySelector(".learn-more").addEventListener("click", function (e) {
   e.preventDefault();
   const id = e.target.getAttribute("href");
   document.querySelector(id).scrollIntoView({ behavior: "smooth" });
