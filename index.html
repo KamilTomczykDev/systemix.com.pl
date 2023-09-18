@@ -12,6 +12,7 @@
       src="https://kit.fontawesome.com/3b897103a1.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="script.js"></script>
 
     <title>Document</title>
   </head>
@@ -26,11 +27,12 @@
           <img src="img/logoSystemixPng.png" class="logo" />
           <ul class="nav__links">
             <li><a class="nav_link" href="#header">Home</a></li>
-            <li><a class="nav_link" href="#firstSection">Projekt UE</a></li>
-            <li><a class="nav_link" href="#secondSection">O nas</a></li>
-            <li><a class="nav_link" href="#thirdSection">Produkty</a></li>
+            <li><a class="nav_link" href="#projects">Projekt UE</a></li>
+            <li><a class="nav_link" href="#new-stuff">Nowości</a></li>
+            <li><a class="nav_link" href="#products">Produkty</a></li>
+            <li><a class="nav_link" href="#company">Firma</a></li>
             <li>
-              <a class="nav_link active" href="#fourthSection">Kontakt</a>
+              <a class="nav_link active" href="#contact">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -51,39 +53,115 @@
               class="eu-logo--second"
             />
           </div>
-          <a class="learn-more" href="#secondSection">Dowiedz się więcej</a>
+          <a class="learn-more" href="#new-stuff">Dowiedz się więcej</a>
         </div>
       </div>
     </div>
     <div class="content">
-      <section class="reveal__section section--hidden" id="firstSection">
-        <h2><i class="fa-solid fa-circle-info"></i> PROJEKT UNIJNY</h2>
-        <p>Infromacje o <span class="highlight">projekcie</span>.</p>
-      </section>
-      <section class="reveal__section section--hidden" id="secondSection">
-        <h2><i class="fa-solid fa-circle-info"></i> Kilka słow o firmie</h2>
-        <p>
-          W dobie społeczeństwa informacyjnego praktycznie każdy przejaw
-          działalności człowieka związany jest z użytkowaniem maszyn i urządzeń,
-          dla działania których niezbędne jest zasilanie ich odpowiednią
-          energią. Bez niej nasza cywilizacja nie potrafi się już obejść.
-          Szczególnym rodzajem tej energii jest energia skumulowana w
-          przenośnych źródłach zasilania, czyli bateriach i akumulatorach. W tym
-          obszarze przemysłowym działa firma
-          <span class="highlight">Systemix</span>.
-        </p>
-      </section>
-      <section class="reveal__section section--hidden" id="secondSection">
+      <section id="projects">
         <h2 class="text-centered">
-          <i class="fa-solid fa-bolt"></i>
-          Źródła energii produkowane przez firmę zasilają:
+          <i class="fa-solid fa-pencil"></i> PROJEKTY UNIJNE
         </h2>
-        <p class="text-centered">
-          <br />urządzenia sygnalizacyjne stosowane w budowie i remontach
-          dróg<br />elektryzatory stosowane w rolnictwie na pastwiskach
-          <br />boje ostrzegawcze (radioboje)<br />parkometry<br />inne
-          urządzenia wymagające długiej, bezingerencyjnej pracy.
-        </p>
+        <section class="reveal__section section--hidden project--wrapper">
+          <div class="project--logo-container">
+            <img src="img/EUsign.png" alt="" class="project--logo-1" />
+            <img src="img/logoRP.png" alt="" class="project--logo-2" />
+            <img src="img/EUsign_2.png" alt="" class="project--logo-3" />
+          </div>
+          <div class="project--text-container">
+            <p class="project--header text-centered">
+              Zakup współfinansowany ze środków Unii Europejsiej w ramach
+              Europejskiego Funduszu Rozwoju Regionalnego
+            </p>
+            <p class="project--number">
+              <span class="highlight">Nr umowy:</span> POIR.03.02.02-00-1926/20
+            </p>
+            <p class="project--title">
+              <span class="highlight">Tytuł projektu:</span> "Wdrożenie
+              technologii produkcji nowej grupy produktowej - baterii
+              przemysłowych cynkowo-powietrznych o elektrolicie alkalicznym
+            </p>
+          </div>
+        </section>
+      </section>
+      <section id="new-stuff">
+        <h2 class="text-centered">
+          <i class="fa-solid fa-circle-exclamation"></i> Nowości
+        </h2>
+        <section class="new-stuff--wrapper reveal__section section--hidden">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dicta
+            tenetur reiciendis placeat illo quis deleniti maiores eum hic totam,
+            illum ipsa voluptatem aliquam
+          </p>
+          <img src="img/folder-1.png" class="folder" />
+          <img src="img/folder-2.png" class="folder" />
+          <button class="new-stuff--btn">Pobierz pierwszą kartę</button>
+          <button class="new-stuff--btn">Pobierz drugą kartę</button>
+        </section>
+      </section>
+      <section class="company-view">
+        <h2 class="company-view--quote">Dbamy o przyszłość</h2>
+      </section>
+      <section id="products">
+        <div class="section__title">
+          <h2 class="text-centered">
+            <i class="fa-solid fa-bolt"></i> Produkty
+          </h2>
+          <section class="products--wrapper reveal__section section--hidden">
+            <p>Krótki opis o produktach, szybko i na temat.</p>
+            <h3 class="highlight">Pierwsza grupa baterii</h3>
+            <div class="products--batteries">
+              <button class="battery">9SX55AH</button>
+              <button class="battery">9SX75AH</button>
+              <button class="battery">9SX120AH</button>
+              <button class="battery">9SX165AH</button>
+            </div>
+            <h3 class="highlight">Druga grupa baterii</h3>
+            <div class="products--batteries">
+              <button class="battery">6SX12AH</button>
+              <button class="battery">6SX25AH</button>
+              <button class="battery">6SX50AH</button>
+              <button class="battery">6SX60AH</button>
+              <button class="battery">6SX120AH</button>
+              <button class="battery">6SX150AH</button>
+            </div>
+          </section>
+        </div>
+        <section class="reveal__section section--hidden"></section>
+      </section>
+      <section id="company">
+        <h2 class="text-centered">
+          <i class="fa-solid fa-circle-info"></i> Firma
+        </h2>
+        <section class="reveal__section section--hidden about-wrapper">
+          <h4>
+            <span class="highlight">Systemix sp. z o.o.</span> to producent
+            bezobsługowychm długodziałających źródeł prądu stałego - baterii
+            przemysłowych.
+          </h4>
+          <img src="img/about.jpg" alt="" class="about-image" />
+        </section>
+        <section
+          class="reveal__section section--hidden about-wrapper wrapper-second"
+        >
+          <h3>
+            Wprowadzamy zmiany w funkcjonowaniu firmy i ofercie produktowej
+            zmniejszające <span class="highlight">ślad węglowy</span>.
+          </h3>
+        </section>
+        <section
+          class="reveal__section section--hidden about-wrapper wrapper-second"
+        >
+          <img src="img/about_2.jpeg" alt="" class="about-image" />
+          <h4>
+            Od <span class="highlight">2003</span> roku systematycznie
+            udoskonala swoje produkty i roszerza ofertę produkowanych wyrobów
+            znajdujących zastosowanie w urządzeniach sygnalizacyjnych,
+            elektrotyzatorach rolniczych i innych urządzeniach wymagających
+            długiej bezintegracyjnej pracy.
+          </h4>
+        </section>
       </section>
       <section class="quoteSection reveal__section section--hidden">
         <h2>
@@ -95,117 +173,9 @@
           cynkowo-powietrznych. Odbiorcami są aktualnie firmy z całej Europy.
         </p>
       </section>
-      <section class="reveal__section section--hidden" id="thirdSection">
-        <div class="section__title">
-          <h2>Produkty</h2>
-          <p>Krótki opis o produktach, szybko i na temat.</p>
-        </div>
 
-        <div class="operations">
-          <div class="operations__tab-container">
-            <button
-              class="btn operations__tab operations__tab--1 operations__tab--active"
-              data-tab="1"
-            >
-              <i class="fa-solid fa-cow fa-2xl"></i>Elektryzatory
-            </button>
-            <button class="btn operations__tab operations__tab--2" data-tab="2">
-              <i class="fa-solid fa-road fa-xl"></i> Lampy drogowe
-            </button>
-          </div>
-          <div
-            class="operations__content operations__content--1 operations__content--active"
-          >
-            <div class="slider">
-              <div class="slide">
-                <div class="testimonial">
-                  <h2>NAZWA</h2>
-                  Obrazek<br /><br />
-                  Chemical System : Zink - Air Alkaline<br />Nominal Voltage:
-                  9V<br />
-                  Nominal Capacity: 55 Ah<br />Nominal Dimension: 165 mm x 111
-                  mm x 114mm<br />Terminals: wire with plug<br />Battery box:
-                  plastic<br />Average Weight: 1380 g<br />Volume: 2,09 dm3
-                </div>
-              </div>
-
-              <div class="slide">
-                <div class="testimonial">
-                  <h2>NAZWA</h2>
-                  Obrazek<br /><br />
-                  Chemical System : Zink - Air Alkaline<br />Nominal Voltage:
-                  9V<br />
-                  Nominal Capacity: 55 Ah<br />Nominal Dimension: 165 mm x 111
-                  mm x 114mm<br />Terminals: wire with plug<br />Battery box:
-                  plastic<br />Average Weight: 1380 g<br />Volume: 2,09 dm3
-                </div>
-              </div>
-
-              <div class="slide">
-                <div class="testimonial">
-                  <h2>NAZWA</h2>
-                  Obrazek<br /><br />
-                  Chemical System : Zink - Air Alkaline<br />Nominal Voltage:
-                  9V<br />
-                  Nominal Capacity: 55 Ah<br />Nominal Dimension: 165 mm x 111
-                  mm x 114mm<br />Terminals: wire with plug<br />Battery box:
-                  plastic<br />Average Weight: 1380 g<br />Volume: 2,09 dm3
-                </div>
-              </div>
-
-              <button class="slider__btn slider__btn--left">&larr;</button>
-              <button class="slider__btn slider__btn--right">&rarr;</button>
-              <div class="dots"></div>
-            </div>
-          </div>
-
-          <div class="operations__content operations__content--2">
-            <div class="slider-2">
-              <div class="slide-2">
-                <div class="testimonial">
-                  <h2>NAZWA 2</h2>
-                  Obrazek<br /><br />
-                  Chemical System : Zink - Air Alkaline<br />Nominal Voltage:
-                  9V<br />
-                  Nominal Capacity: 55 Ah<br />Nominal Dimension: 165 mm x 111
-                  mm x 114mm<br />Terminals: wire with plug<br />Battery box:
-                  plastic<br />Average Weight: 1380 g<br />Volume: 2,09 dm3
-                </div>
-              </div>
-
-              <div class="slide-2">
-                <div class="testimonial">
-                  <h2>NAZWA 3</h2>
-                  Obrazek<br /><br />
-                  Chemical System : Zink - Air Alkaline<br />Nominal Voltage:
-                  9V<br />
-                  Nominal Capacity: 55 Ah<br />Nominal Dimension: 165 mm x 111
-                  mm x 114mm<br />Terminals: wire with plug<br />Battery box:
-                  plastic<br />Average Weight: 1380 g<br />Volume: 2,09 dm3
-                </div>
-              </div>
-
-              <div class="slide-2">
-                <div class="testimonial">
-                  <h2>NAZWA 4</h2>
-                  Obrazek<br /><br />
-                  Chemical System : Zink - Air Alkaline<br />Nominal Voltage:
-                  9V<br />
-                  Nominal Capacity: 55 Ah<br />Nominal Dimension: 165 mm x 111
-                  mm x 114mm<br />Terminals: wire with plug<br />Battery box:
-                  plastic<br />Average Weight: 1380 g<br />Volume: 2,09 dm3
-                </div>
-              </div>
-
-              <button class="slider__btn-2 slider__btn-2--left">&larr;</button>
-              <button class="slider__btn-2 slider__btn-2--right">&rarr;</button>
-              <div class="dots-2"></div>
-            </div>
-          </div>
-        </div>
-      </section>
       <footer>
-        <section class="" id="fourthSection">
+        <section id="contact">
           <h2>Skontaktuj się z nami!</h2>
           <div class="footer--wrapper">
             <p class="footer--contacts">
@@ -219,14 +189,12 @@
           </div>
           <nav class="footer--nav">
             <a class="nav_link" href="#header">Home</a>
-            <a class="nav_link" href="#firstSection">Projekt UE</a>
-            <a class="nav_link" href="#secondSection">O nas</a>
-            <a class="nav_link" href="#thirdSection">Produkty</a>
+            <a class="nav_link" href="#projects">Projekt UE</a>
+            <a class="nav_link" href="#company">O nas</a>
+            <a class="nav_link" href="#products">Produkty</a>
           </nav>
         </section>
       </footer>
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>
