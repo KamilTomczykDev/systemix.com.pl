@@ -7,7 +7,41 @@ const navHeight = nav.getBoundingClientRect().height;
 const tabsContainer = document.querySelector(".operations__tab-container");
 const tabs = document.querySelectorAll(".operations__tab");
 const tabsContent = document.querySelectorAll(".operations__content");
+const productsContainer = document.querySelector(".products--wrapper");
+const batteryHoverElements = document.querySelectorAll(".battery--hover");
 
+// product hovering feature //
+const closeHover = () => {
+  for (const battery of batteryHoverElements) {
+    battery.classList.add("--disabled");
+  }
+};
+productsContainer.addEventListener("click", (e) => {
+  setTimeout(() => {
+    const clicked = e.target.closest(".battery");
+    if (!clicked) return;
+    console.log(clicked);
+    const elementFound = document.getElementById(`${clicked.dataset.id}`);
+    console.log(elementFound);
+
+    closeHover();
+
+    elementFound.classList.toggle("--disabled");
+  }, 1);
+});
+
+document.body.addEventListener("click", (e) => {
+  const clicked = e.target;
+  if (e.target !== batteryHoverElements) {
+    closeHover();
+  }
+  console.log(clicked);
+});
+
+//page starting from top on refresh //
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 // Loading images
 const loadPics = async function () {
   const loadImage = (path) => {

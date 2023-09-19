@@ -14,6 +14,13 @@ body {
   background-color: #f2f2f2;
   font-family: Poppins;
 }
+
+.smooth-scroll-wrapper {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
 /* nav */
 .header {
   position: relative;
@@ -210,7 +217,7 @@ section {
   border: solid 7px var(--green-brand-color);
   border-radius: 50px;
   font-size: 50px;
-  padding: 10px 200px;
+  padding: 10px 50px;
   transition: border-color 0.4s, color 0.4s;
 }
 .new-stuff--btn:hover {
@@ -228,8 +235,8 @@ section {
 
 section h2 {
   color: var(--green-brand-color);
-  font-size: 30px;
-  padding-bottom: 50px;
+  font-size: 35px;
+  padding-bottom: 45px;
 }
 section h3 {
   font-size: 25px;
@@ -330,13 +337,45 @@ section p {
   border-radius: 40px;
   margin: 10px;
   background-color: var(--red-brand-color);
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+/* battery hover */
+.battery--hover {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: conter;
+  gap: 10px;
+  align-items: center;
+  bottom: 100px;
+  left: 0;
+  position: absolute;
+  background-color: white;
+  border-radius: 20px;
+}
+.battery--hover:hover {
+  cursor: default;
+}
+.battery--hover--btn {
+  font-size: 20px;
+  font-family: poppins;
+  color: white;
+  background-color: var(--green-brand-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+}
+.battery--hover--btn:hover {
+  background-color: var(--red-brand-color);
   cursor: pointer;
 }
-.battery:hover {
-  background-color: var(--green-brand-color);
-}
 
+.--disabled {
+  display: none;
+}
 .btn {
   display: inline-block;
   background-color: var(--green-brand-color);
@@ -399,10 +438,8 @@ footer h2 {
   background: none;
 }
 .footer--nav a {
+  font-size: 20px;
   color: white;
-  padding: 5px 30px;
-  border-radius: 30px;
-  border: solid 4px white;
   transition: all 0.3s;
 }
 .footer--nav a:hover {
@@ -427,12 +464,16 @@ footer h2 {
 }
 .about-wrapper h3 {
   font-size: 50px;
+  font-weight: 600;
   color: #414141;
 }
 .about-wrapper h4 {
   font-size: 35px;
   color: #4b4b4b;
   font-weight: 200;
+}
+.wrapper-second {
+  gap: 100px;
 }
 #thirdSection {
   display: flex;

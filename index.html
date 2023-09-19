@@ -17,184 +17,337 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="header" id="header">
-      <nav>
-        <div class="nav-content">
-          <input type="checkbox" id="check" />
-          <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-          </label>
-          <img src="img/logoSystemixPng.png" class="logo" />
-          <ul class="nav__links">
-            <li><a class="nav_link" href="#header">Home</a></li>
-            <li><a class="nav_link" href="#projects">Projekt UE</a></li>
-            <li><a class="nav_link" href="#new-stuff">Nowości</a></li>
-            <li><a class="nav_link" href="#products">Produkty</a></li>
-            <li><a class="nav_link" href="#company">Firma</a></li>
-            <li>
-              <a class="nav_link active" href="#contact">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="low-header">
-        <div class="low-header--content section--hidden">
-          <h1>Inwestujemy w <span class="highlight">Dekarbonizacje</span></h1>
-          <h2>Przykładowy tekst opisujący</h2>
-          <div class="eu--img-container">
-            <img
-              src="img/EUsign_2.png"
-              alt="Znak Funduszy Europejskich"
-              class="eu-logo"
-            />
-            <img
-              src="img/EUsign.png"
-              alt="Znak Unii Europejskiej"
-              class="eu-logo--second"
-            />
+    <div class="smooth-scroll-wrapper">
+      <div class="header" id="header">
+        <nav>
+          <div class="nav-content">
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+            <img src="img/logoSystemixPng.png" class="logo" />
+            <ul class="nav__links">
+              <li><a class="nav_link" href="#header">Home</a></li>
+              <li><a class="nav_link" href="#projects">Projekt UE</a></li>
+              <li><a class="nav_link" href="#new-stuff">Nowości</a></li>
+              <li><a class="nav_link" href="#products">Produkty</a></li>
+              <li><a class="nav_link" href="#company">Firma</a></li>
+              <li>
+                <a class="nav_link active" href="#contact">Kontakt</a>
+              </li>
+            </ul>
           </div>
-          <a class="learn-more" href="#new-stuff">Dowiedz się więcej</a>
+        </nav>
+        <div class="low-header">
+          <div class="low-header--content section--hidden">
+            <h1>Inwestujemy w <span class="highlight">Dekarbonizacje</span></h1>
+            <h2>Przykładowy tekst opisujący</h2>
+            <div class="eu--img-container">
+              <img
+                src="img/EUsign_2.png"
+                alt="Znak Funduszy Europejskich"
+                class="eu-logo"
+              />
+              <img
+                src="img/EUsign.png"
+                alt="Znak Unii Europejskiej"
+                class="eu-logo--second"
+              />
+            </div>
+            <a class="learn-more" href="#new-stuff">Dowiedz się więcej</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="content">
-      <section id="projects">
-        <h2 class="text-centered">
-          <i class="fa-solid fa-pencil"></i> PROJEKTY UNIJNE
-        </h2>
-        <section class="reveal__section section--hidden project--wrapper">
-          <div class="project--logo-container">
-            <img src="img/EUsign.png" alt="" class="project--logo-1" />
-            <img src="img/logoRP.png" alt="" class="project--logo-2" />
-            <img src="img/EUsign_2.png" alt="" class="project--logo-3" />
-          </div>
-          <div class="project--text-container">
-            <p class="project--header text-centered">
-              Zakup współfinansowany ze środków Unii Europejsiej w ramach
-              Europejskiego Funduszu Rozwoju Regionalnego
-            </p>
-            <p class="project--number">
-              <span class="highlight">Nr umowy:</span> POIR.03.02.02-00-1926/20
-            </p>
-            <p class="project--title">
-              <span class="highlight">Tytuł projektu:</span> "Wdrożenie
-              technologii produkcji nowej grupy produktowej - baterii
-              przemysłowych cynkowo-powietrznych o elektrolicie alkalicznym
-            </p>
-          </div>
-        </section>
-      </section>
-      <section id="new-stuff">
-        <h2 class="text-centered">
-          <i class="fa-solid fa-circle-exclamation"></i> Nowości
-        </h2>
-        <section class="new-stuff--wrapper reveal__section section--hidden">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dicta
-            tenetur reiciendis placeat illo quis deleniti maiores eum hic totam,
-            illum ipsa voluptatem aliquam
-          </p>
-          <img src="img/folder-1.png" class="folder" />
-          <img src="img/folder-2.png" class="folder" />
-          <button class="new-stuff--btn">Pobierz pierwszą kartę</button>
-          <button class="new-stuff--btn">Pobierz drugą kartę</button>
-        </section>
-      </section>
-      <section class="company-view">
-        <h2 class="company-view--quote">Dbamy o przyszłość</h2>
-      </section>
-      <section id="products">
-        <div class="section__title">
+      <div class="content">
+        <section id="projects">
           <h2 class="text-centered">
-            <i class="fa-solid fa-bolt"></i> Produkty
+            <i class="fa-solid fa-pencil"></i> PROJEKTY UNIJNE
           </h2>
-          <section class="products--wrapper reveal__section section--hidden">
-            <p>Krótki opis o produktach, szybko i na temat.</p>
-            <h3 class="highlight">Pierwsza grupa baterii</h3>
-            <div class="products--batteries">
-              <button class="battery">9SX55AH</button>
-              <button class="battery">9SX75AH</button>
-              <button class="battery">9SX120AH</button>
-              <button class="battery">9SX165AH</button>
+          <section class="reveal__section section--hidden project--wrapper">
+            <div class="project--logo-container">
+              <img src="img/EUsign.png" alt="" class="project--logo-1" />
+              <img src="img/logoRP.png" alt="" class="project--logo-2" />
+              <img src="img/EUsign_2.png" alt="" class="project--logo-3" />
             </div>
-            <h3 class="highlight">Druga grupa baterii</h3>
-            <div class="products--batteries">
-              <button class="battery">6SX12AH</button>
-              <button class="battery">6SX25AH</button>
-              <button class="battery">6SX50AH</button>
-              <button class="battery">6SX60AH</button>
-              <button class="battery">6SX120AH</button>
-              <button class="battery">6SX150AH</button>
+            <div class="project--text-container">
+              <p class="project--header text-centered">
+                Zakup współfinansowany ze środków Unii Europejsiej w ramach
+                Europejskiego Funduszu Rozwoju Regionalnego
+              </p>
+              <p class="project--number">
+                <span class="highlight">Nr umowy:</span>
+                POIR.03.02.02-00-1926/20
+              </p>
+              <p class="project--title">
+                <span class="highlight">Tytuł projektu:</span> "Wdrożenie
+                technologii produkcji nowej grupy produktowej - baterii
+                przemysłowych cynkowo-powietrznych o elektrolicie alkalicznym
+              </p>
             </div>
           </section>
-        </div>
-        <section class="reveal__section section--hidden"></section>
-      </section>
-      <section id="company">
-        <h2 class="text-centered">
-          <i class="fa-solid fa-circle-info"></i> Firma
-        </h2>
-        <section class="reveal__section section--hidden about-wrapper">
-          <h4>
-            <span class="highlight">Systemix sp. z o.o.</span> to producent
-            bezobsługowychm długodziałających źródeł prądu stałego - baterii
-            przemysłowych.
-          </h4>
-          <img src="img/about.jpg" alt="" class="about-image" />
         </section>
-        <section
-          class="reveal__section section--hidden about-wrapper wrapper-second"
-        >
-          <h3>
-            Wprowadzamy zmiany w funkcjonowaniu firmy i ofercie produktowej
-            zmniejszające <span class="highlight">ślad węglowy</span>.
-          </h3>
-        </section>
-        <section
-          class="reveal__section section--hidden about-wrapper wrapper-second"
-        >
-          <img src="img/about_2.jpeg" alt="" class="about-image" />
-          <h4>
-            Od <span class="highlight">2003</span> roku systematycznie
-            udoskonala swoje produkty i roszerza ofertę produkowanych wyrobów
-            znajdujących zastosowanie w urządzeniach sygnalizacyjnych,
-            elektrotyzatorach rolniczych i innych urządzeniach wymagających
-            długiej bezintegracyjnej pracy.
-          </h4>
-        </section>
-      </section>
-      <section class="quoteSection reveal__section section--hidden">
-        <h2>
-          <span class="highlight"> Systemix Sp. z o.o. </span>
-          to firma od wielu lat działająca w branży elektrochemicznej
-        </h2>
-        <p>
-          To jeden z kilku na świecie producentów baterii przemysłowych
-          cynkowo-powietrznych. Odbiorcami są aktualnie firmy z całej Europy.
-        </p>
-      </section>
-
-      <footer>
-        <section id="contact">
-          <h2>Skontaktuj się z nami!</h2>
-          <div class="footer--wrapper">
-            <p class="footer--contacts">
-              SYSTEMIX Sp. z o.o.<br />
-              ul. Lubichowska 176A <br />83-200 Starogard Gdański
+        <section id="new-stuff">
+          <h2 class="text-centered">
+            <i class="fa-solid fa-circle-exclamation"></i> Nowości
+          </h2>
+          <section class="new-stuff--wrapper reveal__section section--hidden">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+              dicta tenetur reiciendis placeat illo quis deleniti maiores eum
+              hic totam, illum ipsa voluptatem aliquam
             </p>
-            <p class="footer--contacts">
-              tel. +48 58/561 48 13 <br />fax +48 58/561 48 14
-              <br />biuro@systemix.com.pl
-            </p>
+            <img src="img/folder-1.png" class="folder" />
+            <img src="img/folder-2.png" class="folder" />
+            <button class="new-stuff--btn">Pobierz kartę produtu</button>
+            <button class="new-stuff--btn">
+              Pobierz kartę bezpieczeństwa produktu
+            </button>
+          </section>
+        </section>
+        <section class="company-view">
+          <h2 class="company-view--quote">Dbamy o przyszłość</h2>
+        </section>
+        <section id="products">
+          <div class="section__title">
+            <h2 class="text-centered">
+              <i class="fa-solid fa-bolt"></i> Produkty
+            </h2>
+            <section class="products--wrapper reveal__section section--hidden">
+              <p>Krótki opis o produktach, szybko i na temat.</p>
+              <h3 class="highlight">Pierwsza grupa baterii</h3>
+              <div class="products--batteries">
+                <div class="battery" data-id="1">
+                  <span>6SX25AH</span>
+                  <div class="battery--hover --disabled" id="1">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="2">
+                  <span>6SX50AH</span>
+                  <div class="battery--hover --disabled" id="2">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="3">
+                  <span>6SX60AH</span>
+                  <div class="battery--hover --disabled" id="3">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="4">
+                  <span>6SX120AH</span>
+                  <div class="battery--hover --disabled" id="4">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="5">
+                  <span>6SX150AH</span>
+                  <div class="battery--hover --disabled" id="5">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <h3 class="highlight">Druga grupa baterii</h3>
+              <div class="products--batteries">
+                <div class="battery" data-id="6">
+                  <span>9SX55AH</span>
+                  <div class="battery--hover --disabled" id="6">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="7">
+                  <span>9SX75AH</span>
+                  <div class="battery--hover --disabled" id="7">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="8">
+                  <span>9SX90AH</span>
+                  <div class="battery--hover --disabled" id="8">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="9">
+                  <span>9SX130AH</span>
+                  <div class="battery--hover --disabled" id="9">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="10">
+                  <span>9SX170AH</span>
+                  <div class="battery--hover --disabled" id="10">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+                <div class="battery" data-id="11">
+                  <span>9SX200AH</span>
+                  <div class="battery--hover --disabled" id="11">
+                    <img
+                      src="img/EUsign.png"
+                      alt=""
+                      class="battery--hover--img"
+                    />
+                    <button class="battery--hover--btn">Karta produktu</button>
+                    <button class="battery--hover--btn">
+                      Karta bezpieczeństwa produktu
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-          <nav class="footer--nav">
-            <a class="nav_link" href="#header">Home</a>
-            <a class="nav_link" href="#projects">Projekt UE</a>
-            <a class="nav_link" href="#company">O nas</a>
-            <a class="nav_link" href="#products">Produkty</a>
-          </nav>
+          <section class="reveal__section section--hidden"></section>
         </section>
-      </footer>
+        <section id="company">
+          <h2 class="text-centered">
+            <i class="fa-solid fa-circle-info"></i> Firma
+          </h2>
+          <section class="reveal__section section--hidden about-wrapper">
+            <h4>
+              <span class="highlight">Systemix sp. z o.o.</span> to producent
+              bezobsługowychm długodziałających źródeł prądu stałego - baterii
+              przemysłowych.
+            </h4>
+            <img src="img/company-pic.jpg" alt="" class="about-image" />
+          </section>
+          <section
+            class="reveal__section section--hidden about-wrapper wrapper-second"
+          >
+            <h3>
+              Wprowadzamy zmiany w funkcjonowaniu firmy i ofercie produktowej
+              zmniejszające <span class="highlight">ślad węglowy</span>.
+            </h3>
+          </section>
+          <section
+            class="reveal__section section--hidden about-wrapper about-wrapper"
+          >
+            <img src="img/company-pic-2.jpg" alt="" class="about-image" />
+            <h4>
+              Od <span class="highlight">2003</span> roku systematycznie
+              udoskonala swoje produkty i roszerza ofertę produkowanych wyrobów
+              znajdujących zastosowanie w urządzeniach sygnalizacyjnych,
+              elektrotyzatorach rolniczych i innych urządzeniach wymagających
+              długiej bezintegracyjnej pracy.
+            </h4>
+          </section>
+          <section
+            class="reveal__section section--hidden about-wrapper wrapper-second"
+          >
+            <h3>
+              Unowocześniamy, robotyzujemy i automatyzujemy procesy produkcyjne
+              zmniejszając energochłoność, materiałochłonność produktów.
+            </h3>
+          </section>
+          <section
+            class="reveal__section section--hidden about-wrapper wrapper-second"
+          >
+            <img src="img/company-pic-3.jpeg" alt="" class="about-image" />
+            <img src="img/company-pic-4.jpg" alt="" class="about-image" />
+          </section>
+        </section>
+        <footer>
+          <section id="contact">
+            <h2>Skontaktuj się z nami!</h2>
+            <div class="footer--wrapper">
+              <p class="footer--contacts">
+                SYSTEMIX Sp. z o.o.<br />
+                ul. Lubichowska 176A <br />83-200 Starogard Gdański
+              </p>
+              <p class="footer--contacts">
+                tel. +48 58/561 48 13 <br />fax +48 58/561 48 14
+                <br />biuro@systemix.com.pl
+              </p>
+            </div>
+            <nav class="footer--nav">
+              <a class="nav_link" href="#header">Home</a>
+              <a class="nav_link" href="#projects">Projekt UE</a>
+              <a class="nav_link" href="#new-stuff">Nowości</a>
+              <a class="nav_link" href="#products">Produkty</a>
+              <a class="nav_link" href="#company">Firma</a>
+            </nav>
+          </section>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
