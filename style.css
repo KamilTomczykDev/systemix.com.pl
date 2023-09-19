@@ -1,6 +1,11 @@
 :root {
   --green-brand-color: rgba(15, 76, 42, 255);
   --red-brand-color: rgba(197, 1, 5, 255);
+  --gradient-primary: linear-gradient(
+    to top left,
+    var(--green-brand-color),
+    #9be15d
+  );
 }
 
 * {
@@ -103,7 +108,7 @@ a.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(img/slider1.png);
+  background: url(img/slider3.jpg);
   background-size: cover;
   z-index: 999;
   position: relative;
@@ -111,12 +116,16 @@ a.active {
 }
 
 @keyframes animate {
-  50% {
-    background: url(img/slider2.png);
+  30% {
+    background: url(img/slider4.jpg);
+    background-size: cover;
+  }
+  60% {
+    background: url(img/slider5.jpg);
     background-size: cover;
   }
   100% {
-    background: url(img/slider1.png);
+    background: url(img/slider3.jpg);
     background-size: cover;
   }
 }
@@ -128,29 +137,29 @@ a.active {
   align-items: center;
   text-align: center;
   transition: all 2s;
-  top: 50px;
+  top: 100px;
 }
 
 .header h1 {
-  color: #414141;
+  color: #ffffff;
   font-size: 100px;
   font-family: Poppins;
   font-weight: 700;
 }
 
 .header h2 {
-  color: #414141;
+  color: #ffffff;
   font-size: 40px;
   font-family: Poppins;
   font-weight: 700;
 }
 
 .learn-more {
-  border: solid 3px var(--green-brand-color);
+  border: solid 3px white;
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 30px;
-  color: var(--green-brand-color);
+  color: white;
   transition: all 0.7s;
 }
 .learn-more:hover {
@@ -275,20 +284,22 @@ section p {
   color: var(--green-brand-color);
   font-weight: bold;
 }
-.quoteSection {
-  font-size: 23px;
-  color: #4b4b4b;
-  border-top: solid;
-  border-width: 2px;
-  border-color: #c9c9c9;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
-  transition: all 1s;
+.highlight-red {
+  position: relative;
 }
-.quoteSection h2 {
-  font-size: 70px;
+
+.highlight-red::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  transform: scale(1.03, 1.05) skewX(-15deg);
+  background-color: var(--green-brand-color);
 }
 /* PROJECT */
 .project--logo-container {
