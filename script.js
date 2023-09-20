@@ -9,6 +9,7 @@ const tabs = document.querySelectorAll(".operations__tab");
 const tabsContent = document.querySelectorAll(".operations__content");
 const productsContainer = document.querySelector(".products--wrapper");
 const batteryHoverElements = document.querySelectorAll(".battery--hover");
+const batteries = document.querySelectorAll(".battery");
 
 // product hovering feature //
 const closeHover = () => {
@@ -17,16 +18,19 @@ const closeHover = () => {
   }
 };
 productsContainer.addEventListener("click", (e) => {
+  const clicked = e.target.closest(".battery");
+  if (!clicked) return;
+  for (const battery of batteries) {
+    battery.style.backgroundColor = "var(--green-brand-color)";
+  }
+
+  console.log(clicked);
+  const elementFound = document.getElementById(`${clicked.dataset.id}`);
+  console.log(elementFound);
   setTimeout(() => {
-    const clicked = e.target.closest(".battery");
-    if (!clicked) return;
-    console.log(clicked);
-    const elementFound = document.getElementById(`${clicked.dataset.id}`);
-    console.log(elementFound);
-
     closeHover();
-
     elementFound.classList.toggle("--disabled");
+    clicked.style.backgroundColor = "var(--red-brand-color)";
   }, 1);
 });
 
@@ -34,6 +38,9 @@ document.body.addEventListener("click", (e) => {
   const clicked = e.target;
   if (e.target !== batteryHoverElements) {
     closeHover();
+    for (const battery of batteries) {
+      battery.style.backgroundColor = "var(--green-brand-color)";
+    }
   }
   console.log(clicked);
 });
@@ -42,23 +49,33 @@ document.body.addEventListener("click", (e) => {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+
 // Loading images
-const loadPics = async function () {
-  const loadImage = (path) => {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.crossOrigin = "Anonymous"; // to avoid CORS if used with Canvas
-      img.src = path;
-      img.onload = () => {
-        resolve(img);
-      };
-      img.onerror = (e) => {
-        reject(e);
-      };
-    });
-  };
-  const img = await loadImage("/img/background.jpeg");
+
+const loadImage = (path) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "Anonymous"; // to avoid CORS if used with Canvas
+    img.src = path;
+    img.onload = () => {
+      resolve(img);
+    };
+    img.onerror = (e) => {
+      reject(e);
+    };
+  });
 };
+const imageLoading = async function (url) {
+  await loadImage(url);
+};
+imageLoading("img/company-pic.jpg");
+imageLoading("img/company-pic-2.jpg");
+imageLoading("img/company-pic-3.jpeg");
+imageLoading("img/company-pic-4.jpg");
+imageLoading("img/slider3.jpg");
+imageLoading("img/slider4.jpg");
+imageLoading("img/slider5.jpg");
+imageLoading("img/slider6.jpg");
 
 // Smooth Loading left side of nav
 
