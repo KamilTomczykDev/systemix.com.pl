@@ -248,8 +248,12 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5%;
 }
 .project--logo-container img {
+  width: 300px;
+}
+.project--logo-3 {
   width: 400px;
 }
 .project--text-container {
@@ -271,6 +275,7 @@ section p {
 .folder {
   box-shadow: 5px 5px 20px #414141;
   margin-top: 50px;
+  width: 70%;
 }
 .new-stuff p {
   text-align: center;
@@ -408,28 +413,28 @@ section p {
   border-radius: 0px;
   width: 40%;
 }
-.about-wrapper p {
+.company--wrapper p {
   font-size: 30px;
   text-align: justify;
 }
-.about-wrapper {
+.company--wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20%;
   margin-top: 100px;
 }
-.about-wrapper h3 {
+.company--wrapper h3 {
   font-size: 50px;
   font-weight: 600;
   color: #414141;
 }
-.about-wrapper h4 {
+.company--wrapper h4 {
   font-size: 35px;
   color: #4b4b4b;
   font-weight: 200;
 }
-.wrapper-second {
+.company--wrapper-second {
   gap: 100px;
 }
 
@@ -469,6 +474,8 @@ footer h2 {
 }
 .footer--nav {
   position: static;
+  border-top: solid 4px white;
+  padding-top: 15px;
   display: flex;
   justify-content: space-evenly;
   font-size: 25px;
@@ -503,10 +510,10 @@ footer h2 {
 }
 
 @media (max-width: 1000px) {
-  .about-wrapper {
+  .company--wrapper {
     flex-direction: column;
   }
-  .wrapper-second {
+  .company--wrapper-second {
     flex-direction: column-reverse;
   }
   .about-image {

@@ -11,6 +11,35 @@ const productsContainer = document.querySelector(".products--wrapper");
 const batteryHoverElements = document.querySelectorAll(".battery--hover");
 const batteries = document.querySelectorAll(".battery");
 
+// Loading images
+const loadPics = async function (path) {
+  const loadImage = (path) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = "Anonymous"; // to avoid CORS if used with Canvas
+      img.src = path;
+      img.onload = () => {
+        resolve(img);
+        console.log("loaded");
+      };
+      img.onerror = (e) => {
+        reject(e);
+      };
+    });
+  };
+  await loadImage(path);
+};
+
+loadPics("img/background.jpg");
+loadPics("img/systemix-logo.png");
+loadPics("img/EUsign.png");
+loadPics("img/EUsign_2.png");
+loadPics("img/folder-1.png");
+loadPics("img/folder-2.png");
+// loadPics("img/background.jpg");
+// loadPics("img/background.jpg");
+// loadPics("img/background.jpg");
+
 // product hovering feature //
 const closeHover = () => {
   for (const battery of batteryHoverElements) {
@@ -49,33 +78,6 @@ document.body.addEventListener("click", (e) => {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-
-// Loading images
-
-const loadImage = (path) => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.crossOrigin = "Anonymous"; // to avoid CORS if used with Canvas
-    img.src = path;
-    img.onload = () => {
-      resolve(img);
-    };
-    img.onerror = (e) => {
-      reject(e);
-    };
-  });
-};
-const imageLoading = async function (url) {
-  await loadImage(url);
-};
-imageLoading("img/company-pic.jpg");
-imageLoading("img/company-pic-2.jpg");
-imageLoading("img/company-pic-3.jpeg");
-imageLoading("img/company-pic-4.jpg");
-imageLoading("img/slider3.jpg");
-imageLoading("img/slider4.jpg");
-imageLoading("img/slider5.jpg");
-imageLoading("img/slider6.jpg");
 
 // Smooth Loading left side of nav
 
