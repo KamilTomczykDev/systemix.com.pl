@@ -1,0 +1,19 @@
+{
+  "name": "systemix2",
+  "version": "1.0.0",
+  "description": "systemix landing page",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Kamil Tomczyk",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "core-js": "^3.32.2",
+    "regenerator-runtime": "^0.14.0"
+  }
+}

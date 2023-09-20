@@ -319,7 +319,7 @@ section p {
 }
 .products--batteries {
   flex-wrap: wrap;
-  max-width: 25vw;
+  max-width: 50%;
 }
 .battery {
   font-size: 20px;
@@ -362,6 +362,9 @@ section p {
   padding: 10px 20px;
   border: none;
   border-radius: 30px;
+}
+.battery--hover--img {
+  width: 400px;
 }
 .battery--hover--btn:hover {
   background-color: var(--red-brand-color);
@@ -408,7 +411,7 @@ section p {
 .company-view--logo {
   width: 400px;
 }
-.about-image {
+.company--image {
   border: solid 1px grey;
   border-radius: 0px;
   width: 40%;
@@ -434,9 +437,6 @@ section p {
   color: #4b4b4b;
   font-weight: 200;
 }
-.company--wrapper-second {
-  gap: 100px;
-}
 
 /* footer */
 footer {
@@ -459,7 +459,7 @@ footer section {
 footer h2 {
   color: white;
   font-size: 100px;
-  text-align: left;
+  text-align: center;
   padding: 0;
 }
 .footer--wrapper {
@@ -474,7 +474,7 @@ footer h2 {
 }
 .footer--nav {
   position: static;
-  border-top: solid 4px white;
+  border-top: solid 3px white;
   padding-top: 15px;
   display: flex;
   justify-content: space-evenly;
@@ -495,32 +495,12 @@ footer h2 {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1155px) {
-  a.active {
-    border-width: 2.5px;
-  }
-
-  nav ul li a {
-    font-size: 30px;
-    padding: 5px 5px;
-  }
-  nav ul li {
-    margin: 0 15px;
+@media (max-width: 1600px) {
+  .company--wrapper {
+    gap: 10%;
   }
 }
-
-@media (max-width: 1000px) {
-  .company--wrapper {
-    flex-direction: column;
-  }
-  .company--wrapper-second {
-    flex-direction: column-reverse;
-  }
-  .about-image {
-    width: 650px;
-    box-shadow: 5px 5px 10px #7e7e7e;
-    border-radius: 15px;
-  }
+@media (max-width: 1250px) {
   .checkbtn {
     display: block;
   }
@@ -548,9 +528,7 @@ footer h2 {
     color: var(--green-brand-color);
     font-weight: bold;
   }
-  .company-view--logo {
-    width: 250px;
-  }
+
   a:hover,
   a.active {
     background: none;
@@ -559,11 +537,57 @@ footer h2 {
   #check:checked ~ ul {
     left: 0;
   }
-  .footer--wrapper {
-    gap: 100px;
-  }
   .logo {
     width: 180px;
+  }
+
+  .company--wrapper h4 {
+    font-size: 25px;
+  }
+  .company--wrapper h3 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #414141;
+  }
+  .footer h2 {
+    font-size: 75px;
+  }
+  .company-view--quote {
+    font-size: 78px;
+  }
+  .products--batteries {
+    max-width: 100%;
+  }
+  .battery {
+    padding: 5px 15px;
+  }
+  .new-stuff--btn {
+    font-size: 30px;
+    border-width: 5px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .company--wrapper {
+    flex-direction: column;
+  }
+  .company--wrapper-second {
+    flex-direction: column-reverse;
+  }
+  .company--image {
+    width: 650px;
+  }
+  .company--wrapper {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+  .company-view--logo {
+    width: 250px;
+  }
+
+  .footer--wrapper {
+    gap: 100px;
   }
   .eu-logo {
     width: 160px;
@@ -582,11 +606,32 @@ footer h2 {
   #secondSection {
     display: none;
   }
+  .project--logo-container img {
+    width: 200px;
+  }
+  .project--logo-3 {
+    width: 300px;
+  }
+  .company--image {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  .company--wrapper h4 {
+    font-size: 35px;
+  }
+  #projects,
+  #new-stuff,
+  #products,
+  #company {
+    padding: 100px 2vw;
+    border-width: 1px;
+    border-color: #c9c9c9;
+  }
 }
 
 @media (max-width: 800px) {
   section {
-    padding: 100px 5vw;
+    padding: 100px 2vw;
   }
   .low-header h1 {
     font-size: 50px;
@@ -620,9 +665,21 @@ footer h2 {
   .quoteSection h2 {
     font-size: 20px;
   }
-  .about-image {
-    border-radius: 30px;
+  .new-stuff--btn {
+    font-size: 25px;
+    border-width: 4px;
+    padding: 10px 30px;
+    margin: 15px;
   }
+  section p {
+    text-align: center;
+  }
+  .company-view--quote {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
 }
 
 @media (max-width: 450px) {

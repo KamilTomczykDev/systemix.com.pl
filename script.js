@@ -12,30 +12,30 @@ const batteryHoverElements = document.querySelectorAll(".battery--hover");
 const batteries = document.querySelectorAll(".battery");
 
 // Loading images
-const loadPics = async function (path) {
-  const loadImage = (path) => {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.crossOrigin = "Anonymous"; // to avoid CORS if used with Canvas
-      img.src = path;
-      img.onload = () => {
-        resolve(img);
-        console.log("loaded");
-      };
-      img.onerror = (e) => {
-        reject(e);
-      };
-    });
-  };
-  await loadImage(path);
-};
+// const loadPics = async function (path) {
+//   const loadImage = (path) => {
+//     return new Promise((resolve, reject) => {
+//       const img = new Image();
+//       img.crossOrigin = "Anonymous"; // to avoid CORS if used with Canvas
+//       img.src = path;
+//       img.onload = () => {
+//         resolve(img);
+//         console.log("loaded");
+//       };
+//       img.onerror = (e) => {
+//         reject(e);
+//       };
+//     });
+//   };
+//   await loadImage(path);
+// };
 
-loadPics("img/background.jpg");
-loadPics("img/systemix-logo.png");
-loadPics("img/EUsign.png");
-loadPics("img/EUsign_2.png");
-loadPics("img/folder-1.png");
-loadPics("img/folder-2.png");
+// loadPics("img/background.jpg");
+// loadPics("img/systemix-logo.png");
+// loadPics("img/EUsign.png");
+// loadPics("img/EUsign_2.png");
+// loadPics("img/folder-1.png");
+// loadPics("img/folder-2.png");
 // loadPics("img/background.jpg");
 // loadPics("img/background.jpg");
 // loadPics("img/background.jpg");
