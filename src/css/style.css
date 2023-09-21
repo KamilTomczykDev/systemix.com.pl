@@ -105,7 +105,7 @@ a.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(img/slider3.jpg);
+  background: url("/src/img/slider3.jpg");
   background-position: center center;
   background-size: cover;
   z-index: 999;
@@ -115,22 +115,22 @@ a.active {
 
 @keyframes animate {
   35% {
-    background: url(img/slider4.jpg);
+    background: url("/src/img/slider4.jpg");
     background-position: center center;
     background-size: cover;
   }
   50% {
-    background: url(img/slider7.jpg);
+    background: url("/src/img/slider7.jpg");
     background-position: center center;
     background-size: cover;
   }
   75% {
-    background: url(img/slider6.jpg);
+    background: url("/src/img/slider6.jpg");
     background-position: center center;
     background-size: cover;
   }
   100% {
-    background: url(img/slider3.jpg);
+    background: url("/src/img/slider3.jpg");
     background-position: center center;
     background-size: cover;
   }
@@ -166,7 +166,9 @@ a.active {
 }
 .learn-more:hover {
   transform: translateY(20px);
-  border-color: var(--red-brand-color);
+  background-color: white;
+  color: var(--green-brand-color);
+  font-weight: bold;
 }
 .eu--img-container {
   /* margin-top: 30px; */
@@ -291,14 +293,19 @@ section p {
   border-radius: 50px;
   font-size: 35px;
   padding: 10px 50px;
-  transition: border-color 0.4s, color 0.4s;
+  transition: all 0.2s;
 }
 .new-stuff--btn:hover {
-  color: var(--red-brand-color);
+  color: #f2f2f2;
+  background-color: var(--red-brand-color);
   border-color: var(--red-brand-color);
 }
 .new-stuff--btn:active {
   opacity: 0.8;
+}
+.new-stuff--text {
+  text-align: center;
+  margin: 25px 0;
 }
 
 /* PRODUCTS */
@@ -370,6 +377,7 @@ section p {
 .battery--hover--btn:hover {
   background-color: var(--red-brand-color);
   cursor: pointer;
+  color: white;
 }
 .--disabled {
   display: none;
@@ -400,7 +408,7 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(img/background.jpg);
+  background-image: url("/src/img/background.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -500,6 +508,9 @@ footer h2 {
   .company--wrapper {
     gap: 10%;
   }
+  .low-header h2 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -509,7 +520,7 @@ footer h2 {
   ul {
     position: fixed;
     width: 100%;
-    background: #ffffff;
+    background: #f2f2f2;
     top: 105px;
     left: -100%;
     text-align: center;
@@ -518,6 +529,9 @@ footer h2 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  ul:hover {
+    background: white;
   }
   nav ul li {
     display: block;
@@ -582,6 +596,9 @@ footer h2 {
 @media (max-width: 1300px) and (orientation: landscape) {
   .low-header h1 {
     font-size: 75px;
+  }
+  .low-header h2 {
+    font-size: 20px;
   }
   .learn-more {
     display: none;
@@ -688,13 +705,19 @@ footer h2 {
     font-size: 50px;
   }
   .low-header h2 {
-    font-size: 35px;
+    font-size: 10px;
   }
   .eu-logo {
     width: 150px;
   }
   .eu-logo--second {
     width: 200px;
+  }
+  .company-view--quote {
+    font-size: 50px;
+  }
+  .low-header h2 {
+    font-size: 20px;
   }
 }
 @media (max-width: 800px) {
@@ -705,7 +728,7 @@ footer h2 {
     font-size: 50px;
   }
   .low-header h2 {
-    font-size: 30px;
+    font-size: 15px;
   }
   .company-view--logo {
     width: 175px;
@@ -767,6 +790,9 @@ footer h2 {
   #company {
     padding: 50px 2vw;
   }
+  .low-header h2 {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -783,7 +809,8 @@ footer h2 {
     font-size: 38px;
   }
   .header h2 {
-    font-size: 20px;
+    font-size: 10px;
+    padding: 0 10px;
   }
   .learn-more {
     font-size: 15px;
@@ -799,6 +826,9 @@ footer h2 {
   }
   section {
     padding: 75px 3vw;
+  }
+  .products--wrapper {
+    text-align: center;
   }
   .footer--nav a {
     font-size: 10px;

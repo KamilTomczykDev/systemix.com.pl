@@ -2,7 +2,7 @@
   "name": "systemix2",
   "version": "1.0.0",
   "description": "systemix landing page",
-  "main": "script.js",
+  "main": "src/js/script.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
