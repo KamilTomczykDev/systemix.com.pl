@@ -339,13 +339,14 @@ section p {
 /* battery hover */
 .battery--hover {
   padding: 20px;
+  width: 200%;
   display: flex;
   flex-direction: column;
   justify-content: conter;
   gap: 10px;
   align-items: center;
   bottom: 100px;
-  left: 0;
+  left: -50%;
   position: absolute;
   background-color: rgb(239, 239, 239);
   border: solid 2px grey;
@@ -500,35 +501,48 @@ footer h2 {
     gap: 10%;
   }
 }
-@media (max-width: 1250px) {
+
+@media (max-width: 1300px) {
   .checkbtn {
     display: block;
   }
   ul {
     position: fixed;
     width: 100%;
-    height: 100vh;
-    background: #ffffffc4;
+    background: #ffffff;
     top: 105px;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
   nav ul li {
     display: block;
-    margin: 50px 0;
+    margin: 25px 0;
     line-height: 30px;
   }
   nav ul li a {
-    font-size: 40px;
+    font-size: 30px;
     color: var(--green-brand-color);
     font-weight: bold;
   }
-
+  .learn-more {
+    font-size: 25px;
+    border: solid 2px white;
+    padding: 5px 20px;
+  }
+  a.active {
+    font-size: 30px;
+    color: var(--green-brand-color);
+    font-weight: bold;
+  }
+  a.active:hover {
+    background-color: white;
+    color: var(--red-brand-color);
+  }
   a:hover,
   a.active {
     background: none;
@@ -540,7 +554,6 @@ footer h2 {
   .logo {
     width: 180px;
   }
-
   .company--wrapper h4 {
     font-size: 25px;
   }
@@ -566,6 +579,33 @@ footer h2 {
     border-width: 5px;
   }
 }
+@media (max-width: 1300px) and (orientation: landscape) {
+  .low-header h1 {
+    font-size: 75px;
+  }
+  .learn-more {
+    display: none;
+  }
+  .eu-logo {
+    width: 200px;
+  }
+  .eu-logo--second {
+    width: 250px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .checkbtn {
+    line-height: 60px;
+  }
+  ul {
+    flex-direction: row;
+    top: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
 
 @media (max-width: 1000px) {
   .company--wrapper {
@@ -585,7 +625,6 @@ footer h2 {
   .company-view--logo {
     width: 250px;
   }
-
   .footer--wrapper {
     gap: 100px;
   }
@@ -613,7 +652,7 @@ footer h2 {
     width: 300px;
   }
   .company--image {
-    margin-bottom: 25px;
+    margin: 10px 0px;
     width: 100%;
   }
   .company--wrapper h4 {
@@ -627,8 +666,37 @@ footer h2 {
     border-width: 1px;
     border-color: #c9c9c9;
   }
+  .new-stuff--wrapper p {
+    text-align: center;
+  }
+  .folder {
+    width: 100%;
+  }
+  .products--batteries {
+    flex-direction: column;
+  }
+  .battery {
+    font-size: 30px;
+  }
 }
 
+@media (max-width: 1000px) and (orientation: landscape) {
+  .low-header--content {
+    top: 60px;
+  }
+  .low-header h1 {
+    font-size: 50px;
+  }
+  .low-header h2 {
+    font-size: 35px;
+  }
+  .eu-logo {
+    width: 150px;
+  }
+  .eu-logo--second {
+    width: 200px;
+  }
+}
 @media (max-width: 800px) {
   section {
     padding: 100px 2vw;
@@ -639,31 +707,12 @@ footer h2 {
   .low-header h2 {
     font-size: 30px;
   }
-  footer h2 {
-    font-size: 30px;
-  }
   .company-view--logo {
     width: 175px;
-  }
-  .footer--nav a {
-    font-size: 15px;
-    padding: 5px 10px;
-  }
-  .footer--contacts {
-    font-size: 12px;
-  }
-  .footer--wrapper {
-    gap: 10px;
-  }
-  .footer--nav {
-    gap: 10px;
   }
   .learn-more {
     font-size: 25px;
     border-width: 2px;
-  }
-  .quoteSection h2 {
-    font-size: 20px;
   }
   .new-stuff--btn {
     font-size: 25px;
@@ -677,12 +726,59 @@ footer h2 {
   .company-view--quote {
     text-align: center;
   }
+  .project--logo-container {
+    gap: 2%;
+  }
+
+  .project--logo-container img {
+    width: 150px;
+  }
+  .company--wrapper h4 {
+    font-size: 25px;
+  }
+  .company--wrapper h3 {
+    font-size: 30px;
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 550px) {
+  .footer--nav a {
+    font-size: 15px;
+  }
+  .footer--contacts {
+    font-size: 15px;
+  }
+  .footer--wrapper {
+    gap: 5%;
+  }
+  footer h2 {
+    font-size: 35px;
+  }
+  .footer--nav {
+    gap: 2%;
+  }
+  .new-stuff--btn {
+    font-size: 18px;
+    border-width: 3px;
+  }
+  #projects,
+  #new-stuff,
+  #products,
+  #company {
+    padding: 50px 2vw;
+  }
 }
 
 @media (max-width: 450px) {
+  ul {
+    top: 80px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a.active {
+    font-size: 20px;
+  }
   .header h1 {
     font-size: 38px;
   }
@@ -727,5 +823,47 @@ footer h2 {
   }
   .eu--img-container {
     gap: 20px;
+  }
+  .footer--contacts {
+    font-size: 10px;
+  }
+  .company-view--quote {
+    font-size: 60px;
+  }
+  .company--wrapper h3 {
+    font-size: 20px;
+  }
+  .company--wrapper h4 {
+    font-size: 15px;
+  }
+  .project--logo-container {
+    gap: 0px;
+  }
+
+  .project--logo-container img {
+    width: 125px;
+  }
+  section p {
+    font-size: 25px;
+  }
+  .new-stuff--btn {
+    font-size: 15px;
+    border-width: 2px;
+    padding: 5px 10px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 380px) {
+  .project--logo-container img {
+    width: 100px;
+  }
+  section h2 {
+    font-size: 30px;
+  }
+  section p {
+    font-size: 20px;
+  }
+  .company-view--quote {
+    font-size: 40px;
   }
 }
