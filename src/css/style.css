@@ -81,6 +81,9 @@ a.active:hover {
 a:hover {
   color: rgba(197, 1, 5, 255);
 }
+nav ul li a:active {
+  opacity: 0.8;
+}
 a.active {
   /* border: solid;*/
   border-radius: 60px;
@@ -294,6 +297,7 @@ section p {
   font-size: 35px;
   padding: 10px 50px;
   transition: all 0.2s;
+  text-align: center;
 }
 .new-stuff--btn:hover {
   color: #f2f2f2;
@@ -346,33 +350,32 @@ section p {
 /* battery hover */
 .battery--hover {
   padding: 20px;
-  width: 200%;
   display: flex;
   flex-direction: column;
   justify-content: conter;
   gap: 10px;
   align-items: center;
-  bottom: 100px;
-  left: -50%;
+  bottom: 75px;
+  left: -25%;
   position: absolute;
   background-color: rgb(239, 239, 239);
   border: solid 2px grey;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 .battery--hover:hover {
   cursor: default;
 }
 .battery--hover--btn {
-  font-size: 20px;
+  font-size: 15px;
   font-family: poppins;
   color: white;
   background-color: var(--green-brand-color);
-  padding: 10px 20px;
+  padding: 10px 15px;
   border: none;
   border-radius: 30px;
 }
 .battery--hover--img {
-  width: 400px;
+  width: 300px;
 }
 .battery--hover--btn:hover {
   background-color: var(--red-brand-color);
@@ -504,12 +507,22 @@ footer h2 {
 }
 
 /* MEDIA QUERIES */
+
 @media (max-width: 1600px) {
   .company--wrapper {
     gap: 10%;
   }
+  .low-header h1 {
+    font-size: 60px;
+  }
   .low-header h2 {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 1550px) and (oriantation: landscape) {
+  .learn-more {
+    display: none;
   }
 }
 
@@ -588,14 +601,23 @@ footer h2 {
   .battery {
     padding: 5px 15px;
   }
+  .battery--hover--img {
+    width: 250px;
+  }
+  .battery--hover--btn {
+    font-size: 12px;
+  }
   .new-stuff--btn {
     font-size: 30px;
     border-width: 5px;
   }
 }
 @media (max-width: 1300px) and (orientation: landscape) {
+  .project--logo-container img {
+    width: 200px;
+  }
   .low-header h1 {
-    font-size: 75px;
+    font-size: 72px;
   }
   .low-header h2 {
     font-size: 20px;
@@ -793,6 +815,9 @@ footer h2 {
   .low-header h2 {
     font-size: 15px;
   }
+  .project--logo-container img {
+    width: 140px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -871,7 +896,7 @@ footer h2 {
   }
 
   .project--logo-container img {
-    width: 125px;
+    width: 110px;
   }
   section p {
     font-size: 25px;
