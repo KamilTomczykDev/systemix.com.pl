@@ -421,7 +421,6 @@ section p {
 }
 .company--wrapper p {
   font-size: 30px;
-  text-align: justify;
 }
 .company--wrapper {
   display: flex;
@@ -566,7 +565,7 @@ footer h2 {
   .logo {
     width: 180px;
   }
-  .company--wrapper h4 {
+  .company--wrapper p {
     font-size: 25px;
   }
   .company--wrapper h3 {
@@ -646,7 +645,7 @@ footer h2 {
     margin: 10px 0px;
     width: 100%;
   }
-  .company--wrapper h4 {
+  .company--wrapper p {
     font-size: 35px;
   }
   #projects,
@@ -707,7 +706,7 @@ footer h2 {
   .project--logo-container img {
     width: 150px;
   }
-  .company--wrapper h4 {
+  .company--wrapper p {
     font-size: 25px;
   }
   .company--wrapper h3 {
@@ -817,7 +816,7 @@ footer h2 {
   .company--wrapper h3 {
     font-size: 20px;
   }
-  .company--wrapper h4 {
+  .company--wrapper p {
     font-size: 15px;
   }
   .project--logo-container {
