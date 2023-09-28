@@ -185,11 +185,13 @@ a.active {
 }
 section {
   max-width: 1920px;
-  transition: all 1s;
 }
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+.reveal__section {
+  transition: all 1s;
 }
 #projects,
 #new-stuff,
@@ -456,7 +458,7 @@ footer section {
   border: none;
   gap: 30px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 2%;
 }
 footer h2 {
   color: white;
@@ -477,7 +479,7 @@ footer h2 {
 .footer--nav {
   position: static;
   border-top: solid 3px white;
-  padding-top: 15px;
+  padding-top: 2%;
   display: flex;
   justify-content: space-evenly;
   font-size: 25px;
@@ -598,6 +600,9 @@ footer h2 {
 }
 
 @media (max-width: 1000px) {
+  footer section {
+    padding-top: 0px;
+  }
   .company--wrapper {
     flex-direction: column;
   }
@@ -738,7 +743,7 @@ footer h2 {
   #new-stuff,
   #products,
   #company {
-    padding: 50px 2svw;
+    padding: 150px 2svw;
   }
   .low-header h2 {
     font-size: 15px;
