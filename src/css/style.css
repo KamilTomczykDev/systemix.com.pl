@@ -353,7 +353,6 @@ section p {
   position: absolute;
   background-color: rgb(239, 239, 239);
   border: solid 2px grey;
-  /* border-radius: 20px; */
 }
 .battery--hover:hover {
   cursor: default;
@@ -488,14 +487,19 @@ footer h2 {
 .footer--bottom {
   width: 100%;
   border-top: solid 1px white;
-  padding-top: 2%;
+
   justify-content: center;
   display: flex;
 }
 .footer--bottom h3 {
+  padding-top: 3%;
+  padding-bottom: 3%;
   font-size: 30px;
   color: white;
   font-weight: 100;
+}
+#contact {
+  padding-bottom: 0px;
 }
 
 /* MEDIA QUERIES */
@@ -753,6 +757,9 @@ footer h2 {
   .project--logo-container img {
     width: 140px;
   }
+  .footer--bottom h3 {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -849,6 +856,9 @@ footer h2 {
   }
   .company-view--quote {
     font-size: 40px;
+  }
+  .footer--bottom h3 {
+    font-size: 12px;
   }
 }
 
