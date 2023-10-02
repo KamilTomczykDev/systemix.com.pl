@@ -96,14 +96,6 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
   }
 });
 
-footerNav.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (e.target.classList.contains("nav_link")) {
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-  }
-});
-
 document.querySelector(".learn-more").addEventListener("click", function (e) {
   e.preventDefault();
   const id = e.target.getAttribute("href");
