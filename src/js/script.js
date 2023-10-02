@@ -11,35 +11,6 @@ const productsContainer = document.querySelector(".products--wrapper");
 const batteryHoverElements = document.querySelectorAll(".battery--hover");
 const batteries = document.querySelectorAll(".battery");
 
-// Loading images
-// const loadPics = async function (path) {
-//   const loadImage = (path) => {
-//     return new Promise((resolve, reject) => {
-//       const img = new Image();
-//       img.crossOrigin = "Anonymous"; // to avoid CORS if used with Canvas
-//       img.src = path;
-//       img.onload = () => {
-//         resolve(img);
-//         console.log("loaded");
-//       };
-//       img.onerror = (e) => {
-//         reject(e);
-//       };
-//     });
-//   };
-//   await loadImage(path);
-// };
-
-// loadPics("img/background.jpg");
-// loadPics("img/systemix-logo.png");
-// loadPics("img/EUsign.png");
-// loadPics("img/EUsign_2.png");
-// loadPics("img/folder-1.png");
-// loadPics("img/folder-2.png");
-// loadPics("img/background.jpg");
-// loadPics("img/background.jpg");
-// loadPics("img/background.jpg");
-
 // product hovering feature //
 const closeHover = () => {
   for (const battery of batteryHoverElements) {
@@ -53,9 +24,9 @@ productsContainer.addEventListener("click", (e) => {
     battery.style.backgroundColor = "var(--green-brand-color)";
   }
 
-  console.log(clicked);
+  // console.log(clicked);
   const elementFound = document.getElementById(`${clicked.dataset.id}`);
-  console.log(elementFound);
+  // console.log(elementFound);
   setTimeout(() => {
     closeHover();
     elementFound.classList.toggle("--disabled");
@@ -71,22 +42,14 @@ document.body.addEventListener("click", (e) => {
       battery.style.backgroundColor = "var(--green-brand-color)";
     }
   }
-  console.log(clicked);
+  // console.log(clicked);
 });
 
 //page starting from top on refresh //
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
 
-// Smooth Loading left side of nav
-
-const lowHeaderLeft = document.querySelector(".low-header--content");
-console.log(lowHeaderLeft);
-
-window.addEventListener("load", function () {
-  lowHeaderLeft.classList.remove("section--hidden");
-});
 // Smooth Scrolling
 document.querySelector(".nav__links").addEventListener("click", function (e) {
   e.preventDefault();
@@ -101,24 +64,6 @@ document.querySelector(".learn-more").addEventListener("click", function (e) {
   const id = e.target.getAttribute("href");
   document.querySelector(id).scrollIntoView({ behavior: "smooth" });
 });
-
-//STICKY NAV
-
-// const stickyNav = function (entries) {
-//   const [entry] = entries;
-//   if (!entry.isIntersecting) {
-//     nav.style.position = "fixed";
-//   } else {
-//     nav.style.position = "static";
-//   }
-// };
-
-// const headerObserver = new IntersectionObserver(stickyNav, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: `-${navHeight}px`,
-// });
-// headerObserver.observe(header);
 
 //Reveal sections
 
