@@ -601,7 +601,7 @@ footer h2 {
 
 @media (max-width: 1000px) {
   footer section {
-    padding-top: 0px;
+    padding-top: 3%;
   }
   .company--wrapper {
     flex-direction: column;
@@ -743,7 +743,7 @@ footer h2 {
   #new-stuff,
   #products,
   #company {
-    padding: 150px 2svw;
+    padding: 125px 2svw;
   }
   .low-header h2 {
     font-size: 15px;
