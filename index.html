@@ -31,14 +31,16 @@
           <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
           </label>
-          <img
-            src="src/img/systemix-logo.png"
-            class="logo"
-            alt="Systemix logo"
-            loading="lazy"
-          />
+          <a href="index.html">
+            <img
+              src="src/img/systemix-logo.png"
+              class="logo"
+              alt="Systemix logo"
+              loading="lazy"
+            />
+          </a>
+
           <ul class="nav__links">
-            <li><a class="nav_link" href="#header">Home</a></li>
             <li><a class="nav_link" href="#projects">Projekt UE</a></li>
             <li><a class="nav_link" href="#new-stuff">Nowości</a></li>
             <li><a class="nav_link" href="#products">Produkty</a></li>
@@ -130,14 +132,26 @@
             cynkowo-powietrznych zastępującą tradycyjne baterie 4R25.
           </p>
           <img
-            src="src/img/folder-1.png"
+            src="src/img/folder-001.jpg"
             alt="Pierwsza strona ulotki"
             class="folder"
             loading="lazy"
           />
           <img
-            src="src/img/folder-2.png"
+            src="src/img/folder-002.jpg"
             alt="Druga strona ulotki"
+            class="folder"
+            loading="lazy"
+          />
+          <img
+            src="src/img/folder-003.jpg"
+            alt="Trzecia strona ulotki"
+            class="folder"
+            loading="lazy"
+          />
+          <img
+            src="src/img/folder-004.jpg"
+            alt="Czwarta strona ulotki"
             class="folder"
             loading="lazy"
           />
@@ -147,16 +161,92 @@
             uwzględnia niskoemisyjność, troskę o ochronę planety i przyszłych
             pokoleń.
           </p>
-          <a href="/src/pdf/6SX12.pdf" class="new-stuff--btn" download="6SX12"
-            >Pobierz kartę produtu</a
-          >
-          <a
-            href="/src/pdf/6SX12_safety.pdf"
-            class="new-stuff--btn"
-            download="6SX12_safety"
-          >
-            Pobierz kartę bezpieczeństwa produktu
-          </a>
+          <div class="new-stuff--products">
+            <div class="battery" data-id="20">
+              <span>6SX12AH</span>
+              <div class="battery--hover --disabled" id="20">
+                <p class="highlight">6SX12AH</p>
+                <div class="battery--hover--img-container">
+                  <img
+                    src="src/img/6SX12.png"
+                    alt="Bateria cynkowo-powietrzna"
+                    class="battery--hover--img"
+                    loading="lazy"
+                  />
+                </div>
+
+                <a
+                  href="/src/pdf/6SX12.pdf"
+                  class="battery--hover--btn"
+                  download="6SX12"
+                  >Karta produktu</a
+                >
+                <a
+                  href="/src/pdf/6SX12_safety.pdf"
+                  class="battery--hover--btn"
+                  download="6SX12-safety"
+                >
+                  Karta bezpieczeństwa produktu
+                </a>
+              </div>
+            </div>
+            <div class="battery" data-id="21">
+              <span>6SX18AH</span>
+              <div class="battery--hover --disabled" id="21">
+                <p class="highlight">6SX18AH</p>
+                <div class="battery--hover--img-container">
+                  <img
+                    src="src/img/6SX18.png"
+                    alt="Bateria cynkowo-powietrzna"
+                    class="battery--hover--img"
+                    loading="lazy"
+                  />
+                </div>
+
+                <a
+                  href="/src/pdf/6SX18.pdf"
+                  class="battery--hover--btn"
+                  download="6SX18"
+                  >Karta produktu</a
+                >
+                <a
+                  href="/src/pdf/6SX18_safety.pdf"
+                  class="battery--hover--btn"
+                  download="6SX18-safety"
+                >
+                  Karta bezpieczeństwa produktu
+                </a>
+              </div>
+            </div>
+            <!-- <div class="battery" data-id="22">
+              <span>6SX25AH</span>
+              <div class="battery--hover --disabled" id="22">
+                <p class="highlight">6SX25AH</p>
+                <div class="battery--hover--img-container">
+                  <img
+                    src="src/img/6SX25.png"
+                    alt="Bateria cynkowo-powietrzna"
+                    class="battery--hover--img"
+                    loading="lazy"
+                  />
+                </div>
+
+                <a
+                  href="/src/pdf/6SX25.pdf"
+                  class="battery--hover--btn"
+                  download="6SX25"
+                  >Karta produktu</a
+                >
+                <a
+                  href="/src/pdf/6SX25_safety.pdf"
+                  class="battery--hover--btn"
+                  download="6SX25-safety"
+                >
+                  Karta bezpieczeństwa produktu
+                </a>
+              </div>
+            </div> -->
+          </div>
         </div>
       </section>
       <section class="company-view">
@@ -517,7 +607,7 @@
             udoskonalamy swoje produkty i roszerzamy ofertę produkowanych
             wyrobów znajdujących zastosowanie w urządzeniach sygnalizacyjnych,
             elektryzatorach rolniczych i innych urządzeniach wymagających
-            długiej bezintegracyjnej pracy.
+            długiej bezingerencyjnej pracy.
           </p>
         </div>
         <div

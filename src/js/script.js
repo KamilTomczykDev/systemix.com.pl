@@ -10,6 +10,26 @@ const tabsContent = document.querySelectorAll(".operations__content");
 const productsContainer = document.querySelector(".products--wrapper");
 const batteryHoverElements = document.querySelectorAll(".battery--hover");
 const batteries = document.querySelectorAll(".battery");
+const newStuffProducts = document.querySelector(".new-stuff--products");
+const allImages = document.querySelectorAll(".battery--hover--img");
+
+// product photo modal
+const createModal = (imgsrc) => {
+  document.querySelector(".modal").innerHTML = "";
+  const markup = `
+  <div class="modal">
+    <img src="${imgsrc}" alt="Zdjęcie baterii"/>
+  </div>
+  `;
+  document.body.insertAdjacentHTML("afterbegin", markup);
+};
+
+allImages.forEach(function (img) {
+  img.addEventListener("click", (e) => {
+    const src = e.target.src;
+    createModal(src);
+  });
+});
 
 // product hovering feature //
 const closeHover = () => {
@@ -17,6 +37,33 @@ const closeHover = () => {
     battery.classList.add("--disabled");
   }
 };
+
+newStuffProducts.addEventListener("click", (e) => {
+  const clicked = e.target.closest(".battery");
+  if (!clicked) return;
+  for (const battery of batteries) {
+    battery.style.backgroundColor = "var(--green-brand-color)";
+  }
+
+  // console.log(clicked);
+  const elementFound = document.getElementById(`${clicked.dataset.id}`);
+  // console.log(elementFound);
+  setTimeout(() => {
+    closeHover();
+    elementFound.classList.toggle("--disabled");
+    clicked.style.backgroundColor = "var(--red-brand-color)";
+  }, 1);
+});
+
+document.body.addEventListener("click", (e) => {
+  const clicked = e.target;
+  if (e.target !== batteryHoverElements) {
+    closeHover();
+    for (const battery of batteries) {
+      battery.style.backgroundColor = "var(--green-brand-color)";
+    }
+  }
+});
 productsContainer.addEventListener("click", (e) => {
   const clicked = e.target.closest(".battery");
   if (!clicked) return;

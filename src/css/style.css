@@ -303,6 +303,22 @@ section p {
   text-align: center;
   margin: 25px 0;
 }
+.new-stuff--products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.new-stuff--products .battery {
+  font-size: 35px;
+  padding: 15px 56px;
+  width: auto;
+  border-radius: 50px;
+}
+
+.new-stuff--products .battery--hover {
+  bottom: 100px;
+  left: -10%;
+}
 
 /* PRODUCTS */
 .products--wrapper,
@@ -338,6 +354,10 @@ section p {
   cursor: pointer;
   text-align: center;
   position: relative;
+}
+
+.battery:hover {
+  background-color: var(--red-brand-color);
 }
 
 /* battery hover */
@@ -733,6 +753,18 @@ footer h2 {
 }
 
 @media (max-width: 550px) {
+  .new-stuff--products {
+    flex-direction: column;
+  }
+  .new-stuff--products .battery {
+    font-size: 25px;
+    padding: 10px 30px;
+    width: auto;
+    border-radius: 50px;
+  }
+  .new-stuff--products .battery--hover {
+    left: -35%;
+  }
   .new-stuff--btn {
     font-size: 18px;
     border-width: 3px;
@@ -765,7 +797,7 @@ footer h2 {
     font-size: 20px;
   }
   .header h1 {
-    font-size: 38px;
+    font-size: 36px;
   }
   .header h2 {
     font-size: 10px;
