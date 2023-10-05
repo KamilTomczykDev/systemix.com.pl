@@ -271,7 +271,7 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/src/img/new-stuff-background2.jpg");
+  background-image: url("/src/img/new-stuff-background.jpg");
   background-position: bottom;
   background-size: cover;
 }
@@ -280,6 +280,7 @@ section p {
   font-size: 200px;
   padding: 0;
 }
+
 .new-stuff--wrapper {
   display: flex;
   justify-content: center;
@@ -335,6 +336,11 @@ section p {
 .new-stuff--products .battery--hover {
   bottom: 100px;
   left: -10%;
+}
+
+.new-stuff--availablity-text {
+  font-weight: bold;
+  color: var(--red-brand-color);
 }
 
 /* PRODUCTS */
@@ -432,7 +438,7 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/src/img/background.jpg");
+  background-image: url("/src/img/company-view-background.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -646,6 +652,7 @@ footer h2 {
   .new-stuff--quote {
     font-size: 150px;
   }
+
   .footer--wrapper {
     flex-direction: column;
     justify-content: left;
@@ -726,6 +733,9 @@ footer h2 {
 @media (max-width: 800px) {
   .new-stuff--quote {
     font-size: 125px;
+  }
+  .new-stuff--availablity-text {
+    font-size: 20px;
   }
   section {
     padding: 100px 2svw;
@@ -815,7 +825,6 @@ footer h2 {
 @media (max-width: 450px) {
   .new-stuff--header {
     height: 50svh;
-    background-image: url("/src/img/new-stuff-background2.jpg");
   }
   .new-stuff--quote {
     font-size: 80px;
