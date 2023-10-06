@@ -13,22 +13,49 @@ const batteries = document.querySelectorAll(".battery");
 const newStuffProducts = document.querySelector(".new-stuff--products");
 const allImages = document.querySelectorAll(".battery--hover--img");
 
+const container = document.querySelector(".modal-container");
+
 // product photo modal
-const createModal = (imgsrc) => {
-  document.querySelector(".modal").innerHTML = "";
+const closeModal = () => {
+  container.classList.toggle("hidden");
+};
+
+const showModal = (imgsrc) => {
+  container.classList.toggle("hidden");
+  container.innerHTML = "";
   const markup = `
   <div class="modal">
-    <img src="${imgsrc}" alt="Zdjęcie baterii"/>
+    <div class="modal--img-container">
+      <button class="modal--button">&times;</button>
+      <img class="modal--img" src="${imgsrc}" alt="Zdjęcie baterii"/>
+    </div>
+    <div class="modal--overlay"></div>
   </div>
   `;
-  document.body.insertAdjacentHTML("afterbegin", markup);
+  container.insertAdjacentHTML("beforeend", markup);
 };
 
 allImages.forEach(function (img) {
   img.addEventListener("click", (e) => {
     const src = e.target.src;
-    createModal(src);
+    console.log(window.innerWidth);
+    if (window.innerWidth > 1000) {
+      showModal(src);
+      const overlay = document.querySelector(".modal--overlay");
+      overlay.addEventListener("click", () => closeModal());
+
+      const modalButton = document.querySelector(".modal--button");
+      modalButton.addEventListener("click", (e) => {
+        closeModal();
+      });
+    }
   });
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !container.classList.contains("hidden")) {
+    closeModal();
+  }
 });
 
 // product hovering feature //
@@ -38,12 +65,16 @@ const closeHover = () => {
   }
 };
 
-newStuffProducts.addEventListener("click", (e) => {
-  const clicked = e.target.closest(".battery");
-  if (!clicked) return;
+const setDefaultButton = () => {
   for (const battery of batteries) {
     battery.style.backgroundColor = "var(--green-brand-color)";
   }
+};
+
+newStuffProducts.addEventListener("click", (e) => {
+  const clicked = e.target.closest(".battery");
+  if (!clicked) return;
+  setDefaultButton();
 
   // console.log(clicked);
   const elementFound = document.getElementById(`${clicked.dataset.id}`);
@@ -55,15 +86,6 @@ newStuffProducts.addEventListener("click", (e) => {
   }, 1);
 });
 
-document.body.addEventListener("click", (e) => {
-  const clicked = e.target;
-  if (e.target !== batteryHoverElements) {
-    closeHover();
-    for (const battery of batteries) {
-      battery.style.backgroundColor = "var(--green-brand-color)";
-    }
-  }
-});
 productsContainer.addEventListener("click", (e) => {
   const clicked = e.target.closest(".battery");
   if (!clicked) return;
@@ -83,11 +105,9 @@ productsContainer.addEventListener("click", (e) => {
 
 document.body.addEventListener("click", (e) => {
   const clicked = e.target;
-  if (e.target !== batteryHoverElements) {
+  if (clicked !== batteryHoverElements && clicked !== container) {
     closeHover();
-    for (const battery of batteries) {
-      battery.style.backgroundColor = "var(--green-brand-color)";
-    }
+    setDefaultButton();
   }
   // console.log(clicked);
 });
