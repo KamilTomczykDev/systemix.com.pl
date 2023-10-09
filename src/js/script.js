@@ -15,6 +15,27 @@ const allImages = document.querySelectorAll(".battery--hover--img");
 
 const container = document.querySelector(".modal-container");
 
+// header-slider
+
+const state = {
+  imageNum: 4,
+};
+
+const iterate = function () {
+  setInterval(() => {
+    document.querySelector(`.slider-${state.imageNum}`).style.opacity = "0";
+    if (state.imageNum !== 4) {
+      state.imageNum += 1;
+    } else {
+      state.imageNum = 1;
+    }
+    document.querySelector(`.slider-${state.imageNum}`).style.opacity = "1";
+    console.log(state.imageNum);
+  }, 8000);
+};
+
+iterate();
+
 // product photo modal
 const closeModal = () => {
   container.classList.toggle("hidden");
