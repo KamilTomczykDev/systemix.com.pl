@@ -162,6 +162,7 @@ a.active {
   background-size: cover;
   z-index: 999;
   position: relative;
+  -webkit-animation: animate 30s infinite;
   animation: animate 30s infinite;
 }
 
@@ -342,6 +343,14 @@ section p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.new-stuff--description {
+  display: flex;
+  align-items: center;
+}
+.new-stuff--description img {
+  width: 15%;
+  flex-shrink: 0;
 }
 .folder {
   box-shadow: 5px 5px 20px #414141;
@@ -712,6 +721,12 @@ footer h2 {
 }
 
 @media (max-width: 1000px) {
+  .new-stuff--description {
+    flex-direction: column-reverse;
+  }
+  .new-stuff--description img {
+    width: 30%;
+  }
   .modal--img-container {
     width: 80vw;
   }
