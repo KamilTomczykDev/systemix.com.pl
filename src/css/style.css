@@ -725,6 +725,7 @@ footer h2 {
     flex-direction: column-reverse;
   }
   .new-stuff--description img {
+    margin-top: 5%;
     width: 30%;
   }
   .modal--img-container {
