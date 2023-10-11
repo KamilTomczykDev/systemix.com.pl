@@ -441,7 +441,7 @@ section p {
     width: 0%;
   }
   100% {
-    width: 45%;
+    width: 40%;
   }
 }
 @keyframes third-bar {
@@ -702,7 +702,6 @@ footer h2 {
 .footer--bottom {
   width: 100%;
   border-top: solid 1px white;
-
   justify-content: center;
   display: flex;
 }
@@ -837,7 +836,8 @@ footer h2 {
   }
   .new-stuff--description img {
     margin-top: 5%;
-    width: 30%;
+    width: 300px;
+    align-self: center;
   }
   .modal--img-container {
     width: 80vw;
@@ -940,6 +940,9 @@ footer h2 {
 }
 
 @media (max-width: 800px) {
+  .new-stuff--description img {
+    width: 250px;
+  }
   .new-stuff--quote {
     font-size: 125px;
   }
@@ -1041,6 +1044,9 @@ footer h2 {
 }
 
 @media (max-width: 450px) {
+  .new-stuff--description img {
+    width: 200px;
+  }
   .new-stuff--header {
     height: 50svh;
   }
