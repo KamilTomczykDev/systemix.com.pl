@@ -12,8 +12,40 @@ const batteryHoverElements = document.querySelectorAll(".battery--hover");
 const batteries = document.querySelectorAll(".battery");
 const newStuffProducts = document.querySelector(".new-stuff--products");
 const allImages = document.querySelectorAll(".battery--hover--img");
-
+const allBars = document.querySelectorAll(".no-animation");
 const container = document.querySelector(".modal-container");
+console.log(allBars);
+
+// bars animation
+function showPercentages(num) {
+  const elements = document.querySelectorAll(".bar-percentage");
+  elements[num].style.opacity = "1";
+}
+
+const expand = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) {
+    return;
+  } else {
+    entry.target.classList.remove("no-animation");
+    setTimeout(() => {
+      entry.target.style.width = entry.target.id;
+      if (entry.target.dataset.index)
+        showPercentages(entry.target.dataset.index);
+    }, 3000);
+    observer.unobserve(entry.target);
+  }
+};
+const barObserver = new IntersectionObserver(expand, {
+  root: null,
+  threshold: 0.1,
+});
+
+allBars.forEach(function (bar) {
+  barObserver.observe(bar);
+});
 
 // header-slider
 

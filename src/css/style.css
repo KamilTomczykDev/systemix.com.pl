@@ -364,9 +364,104 @@ section p {
   align-items: center;
 }
 .new-stuff--description img {
-  width: 15%;
+  width: 20%;
   padding: 20px;
   flex-shrink: 0;
+}
+
+.new-stuff--bars {
+  width: 100%;
+  padding: 5%;
+}
+.new-stuff--bars h3 {
+  margin-top: 10%;
+  font-size: 50px;
+  color: var(--green-brand-color);
+}
+
+.new-stuff--bars h4 {
+  font-size: 30px;
+  color: var(--green-brand-color);
+}
+.new-stuff--bars img {
+  display: block;
+  width: 60px;
+}
+.new-stuff--bars .grey {
+  color: #4b4b4b;
+}
+.new-stuff--bars li {
+  margin: 20px 0;
+  padding: 10px;
+}
+.bar {
+  background-color: #b0b0b0;
+  display: block;
+  height: 35px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.bar span {
+  height: 35px;
+  float: left;
+  background-color: var(--green-brand-color);
+}
+.bar-percentage {
+  float: right;
+  opacity: 0;
+  transition: all 1s;
+}
+.grey span {
+  background-color: #4b4b4b;
+}
+.first-bar {
+  animation: first-bar 3s;
+}
+.second-bar {
+  animation: second-bar 3s;
+}
+.third-bar {
+  animation: third-bar 3s;
+}
+.fourth-bar {
+  animation: fourth-bar 3s;
+}
+
+@keyframes first-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes second-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+@keyframes third-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes fourth-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.no-animation {
+  animation: none;
 }
 .folder {
   box-shadow: 5px 5px 20px #414141;
@@ -829,6 +924,19 @@ footer h2 {
   .battery {
     font-size: 20px;
   }
+  .new-stuff--bars p {
+    text-align: left;
+    font-size: 20px;
+  }
+  .new-stuff--bars h3 {
+    font-size: 35px;
+  }
+  .new-stuff--bars h4 {
+    font-size: 20px;
+  }
+  .bar {
+    height: 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -923,6 +1031,12 @@ footer h2 {
   }
   .footer--bottom h3 {
     font-size: 18px;
+  }
+  .new-stuff--bars h3 {
+    font-size: 30px;
+  }
+  .new-stuff--bars p {
+    font-size: 15px;
   }
 }
 
@@ -1032,6 +1146,12 @@ footer h2 {
   }
   .footer--bottom h3 {
     font-size: 12px;
+  }
+  .new-stuff--bars h3 {
+    font-size: 24px;
+  }
+  .new-stuff--bars p {
+    font-size: 13px;
   }
 }
 
