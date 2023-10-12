@@ -14,7 +14,10 @@ const newStuffProducts = document.querySelector(".new-stuff--products");
 const allImages = document.querySelectorAll(".battery--hover--img");
 const allBars = document.querySelectorAll(".no-animation");
 const container = document.querySelector(".modal-container");
-console.log(allBars);
+const wrongBattery = document.querySelector(".wrong-battery");
+const allNewStuffTitles = document.querySelectorAll(
+  ".moved-left, .moved-right"
+);
 
 // bars animation
 function showPercentages(num) {
@@ -24,7 +27,6 @@ function showPercentages(num) {
 
 const expand = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) {
     return;
@@ -46,6 +48,47 @@ const barObserver = new IntersectionObserver(expand, {
 allBars.forEach(function (bar) {
   barObserver.observe(bar);
 });
+
+//4R25 animation
+
+const showBorder = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) {
+    return;
+  } else {
+    entry.target.style.opacity = "1";
+    observer.unobserve(entry.target);
+  }
+};
+const borderObserver = new IntersectionObserver(showBorder, {
+  root: null,
+  threshold: 0.8,
+});
+
+borderObserver.observe(wrongBattery);
+
+//new-stuff--title animation
+
+const showTitle = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) {
+    return;
+  } else {
+    entry.target.style.opacity = "1";
+    entry.target.style.transform = "translateX(0)";
+    observer.unobserve(entry.target);
+  }
+};
+const titleObserver = new IntersectionObserver(showTitle, {
+  root: null,
+  threshold: 1,
+});
+
+allNewStuffTitles.forEach((title) => titleObserver.observe(title));
 
 // header-slider
 

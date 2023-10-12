@@ -296,9 +296,14 @@ section p {
   font-weight: bold;
 }
 .highlight-red {
+  color: var(--red-brand-color);
+  font-family: righteous, sans-serif;
+  font-size: 100px;
+}
+.highlight-green {
   position: relative;
 }
-.highlight-red::after {
+.highlight-green::after {
   display: block;
   content: "";
   position: absolute;
@@ -367,6 +372,11 @@ section p {
   width: 20%;
   padding: 20px;
   flex-shrink: 0;
+  opacity: 0;
+  border: solid 12px var(--red-brand-color);
+  margin: 5%;
+  border-radius: 50%;
+  transition: opacity 2s;
 }
 
 .new-stuff--bars {
@@ -463,10 +473,23 @@ section p {
 .no-animation {
   animation: none;
 }
+
+.new-stuff--title {
+  color: var(--green-brand-color);
+  font-size: 110px;
+  opacity: 0;
+  transition: opacity 1s, transform 3s;
+}
+.moved-right {
+  transform: translateX(10%);
+}
+.moved-left {
+  transform: translateX(-10%);
+}
+
 .folder {
-  box-shadow: 5px 5px 20px #414141;
-  margin-top: 50px;
-  width: 70%;
+  margin: 25px 0px;
+  width: 90%;
 }
 .new-stuff p {
   text-align: center;
@@ -542,7 +565,7 @@ section p {
 .battery {
   font-size: 20px;
   width: 200px;
-  font-family: poppins;
+  font-family: righteous, sans-serif;
   padding: 10px 30px;
   border: none;
   color: white;
@@ -574,6 +597,7 @@ section p {
   border: solid 2px grey;
 }
 .battery p {
+  font-family: Righteous, sans-serif;
   font-size: 35px;
   font-weight: 1000;
 }
@@ -595,9 +619,11 @@ section p {
 }
 .battery--hover--img {
   width: 300px;
+  transition: 0.3s;
 }
 .battery--hover--img:hover {
   cursor: zoom-in;
+  opacity: 0.7;
 }
 .battery--hover--btn:hover {
   background-color: var(--red-brand-color);
@@ -730,6 +756,9 @@ footer h2 {
 }
 
 @media (max-width: 1300px) {
+  .new-stuff--title {
+    font-size: 60px;
+  }
   .modal--button {
     font-size: 30px;
   }
@@ -830,6 +859,10 @@ footer h2 {
 }
 
 @media (max-width: 1000px) {
+  .new-stuff--title {
+    font-size: 50px;
+    text-align: center;
+  }
   .new-stuff--description {
     flex-direction: column-reverse;
   }
@@ -939,6 +972,9 @@ footer h2 {
 }
 
 @media (max-width: 800px) {
+  .new-stuff--title {
+    font-size: 42px;
+  }
   .new-stuff--description img {
     width: 250px;
   }
@@ -997,6 +1033,9 @@ footer h2 {
 }
 
 @media (max-width: 550px) {
+  .new-stuff--title {
+    font-size: 32px;
+  }
   .modal--img {
     width: 80%;
   }
@@ -1134,6 +1173,9 @@ footer h2 {
   }
 }
 @media (max-width: 380px) {
+  .new-stuff--title {
+    font-size: 22px;
+  }
   .new-stuff--quote {
     font-size: 60px;
   }
