@@ -40,6 +40,7 @@ const expand = function (entries, observer) {
     observer.unobserve(entry.target);
   }
 };
+
 const barObserver = new IntersectionObserver(expand, {
   root: null,
   threshold: 0.1,
@@ -53,7 +54,6 @@ allBars.forEach(function (bar) {
 
 const showBorder = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) {
     return;
@@ -62,6 +62,7 @@ const showBorder = function (entries, observer) {
     observer.unobserve(entry.target);
   }
 };
+
 const borderObserver = new IntersectionObserver(showBorder, {
   root: null,
   threshold: 0.8,
@@ -73,8 +74,6 @@ borderObserver.observe(wrongBattery);
 
 const showTitle = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
-
   if (!entry.isIntersecting) {
     return;
   } else {
@@ -83,6 +82,7 @@ const showTitle = function (entries, observer) {
     observer.unobserve(entry.target);
   }
 };
+
 const titleObserver = new IntersectionObserver(showTitle, {
   root: null,
   threshold: 1,
@@ -105,7 +105,6 @@ const iterate = function () {
       state.imageNum = 1;
     }
     document.querySelector(`.slider-${state.imageNum}`).style.opacity = "1";
-    console.log(state.imageNum);
   }, 8000);
 };
 
@@ -134,7 +133,7 @@ const showModal = (imgsrc) => {
 allImages.forEach(function (img) {
   img.addEventListener("click", (e) => {
     const src = e.target.src;
-    console.log(window.innerWidth);
+
     if (window.innerWidth > 1000) {
       showModal(src);
       const overlay = document.querySelector(".modal--overlay");
@@ -169,12 +168,11 @@ const setDefaultButton = () => {
 
 newStuffProducts.addEventListener("click", (e) => {
   const clicked = e.target.closest(".battery");
+
   if (!clicked) return;
   setDefaultButton();
-
-  // console.log(clicked);
   const elementFound = document.getElementById(`${clicked.dataset.id}`);
-  // console.log(elementFound);
+
   setTimeout(() => {
     closeHover();
     elementFound.classList.toggle("--disabled");
@@ -184,14 +182,14 @@ newStuffProducts.addEventListener("click", (e) => {
 
 productsContainer.addEventListener("click", (e) => {
   const clicked = e.target.closest(".battery");
+
   if (!clicked) return;
+
   for (const battery of batteries) {
     battery.style.backgroundColor = "var(--green-brand-color)";
   }
 
-  // console.log(clicked);
   const elementFound = document.getElementById(`${clicked.dataset.id}`);
-  // console.log(elementFound);
   setTimeout(() => {
     closeHover();
     elementFound.classList.toggle("--disabled");
@@ -205,13 +203,7 @@ document.body.addEventListener("click", (e) => {
     closeHover();
     setDefaultButton();
   }
-  // console.log(clicked);
 });
-
-//page starting from top on refresh //
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// };
 
 // Smooth Scrolling
 document.querySelector(".nav__links").addEventListener("click", function (e) {

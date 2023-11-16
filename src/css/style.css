@@ -110,6 +110,20 @@ nav:hover {
   opacity: 0.4;
   cursor: pointer;
 }
+.lang-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 10px;
+  margin-left: 200px;
+  height: 100%;
+}
+.lang-item {
+  border: solid 1px black;
+  height: 20%;
+}
 nav ul {
   float: right;
 }
@@ -826,6 +840,10 @@ footer h2 {
   .logo {
     width: 180px;
   }
+  .lang-container {
+    margin-left: 220px;
+    gap: 8px;
+  }
   .company--wrapper p {
     font-size: 25px;
   }
@@ -1116,6 +1134,9 @@ footer h2 {
     top: 10px;
     width: 100px;
   }
+  .lang-container {
+    margin-left: 150px;
+  }
   .company-view--logo {
     width: 150px;
   }
@@ -1229,6 +1250,9 @@ footer h2 {
   }
   .logo {
     width: 100px;
+  }
+  .lang-container {
+    margin-left: 150px;
   }
   .checkbtn {
     line-height: 60px;
