@@ -19,6 +19,14 @@ const allNewStuffTitles = document.querySelectorAll(
   ".moved-left, .moved-right"
 );
 
+//language change
+
+// const enButton = document.querySelector("#en-button")
+
+// enButton.addEventListener('click', function() {
+
+// })
+
 // bars animation
 function showPercentages(num) {
   const elements = document.querySelectorAll(".bar-percentage");

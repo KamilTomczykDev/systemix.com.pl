@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta id="viewport" name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="preload" href="src/img/slider3.jpg" as="image" />
+    <link rel="preload" href="src/img/slider4.jpg" as="image" />
+    <link rel="preload" href="src/img/slider6.jpg" as="image" />
+    <link rel="preload" href="src/img/slider7.jpg" as="image" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script defer src="src/js/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="src/img/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://kit.fontawesome.com/3b897103a1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Systemix</title>
+  </head>
+  <body>
+    <div class="modal-container hidden"></div>
+    <div class="header" id="header">
+      <nav>
+        <div class="nav-content">
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <a href="https://systemix.com.pl">
+            <img
+              src="src/img/systemix-logo.png"
+              class="logo"
+              alt="Systemix logo"
+              loading="lazy"
+            />
+          </a>
+          <div class="lang-container">
+            <!-- <a href="en/index.html">
+              <img
+                src="src/img/pl.jpg"
+                id="pl-button"
+                class="lang-item"
+                tabindex="0"
+              />
+            </a> -->
+
+            <img
+              src="src/img/de.jpg"
+              id="de-button"
+              class="lang-item"
+              tabindex="0"
+            />
+            <img
+              src="src/img/en.jpg"
+              id="en-button"
+              class="lang-item"
+              tabindex="0"
+            />
+          </div>
+          <ul class="nav__links">
+            <li><a class="nav_link" href="#projects">Projekt UE</a></li>
+            <li><a class="nav_link" href="#new-stuff">Nowości</a></li>
+            <li><a class="nav_link" href="#products">Produkty</a></li>
+            <li><a class="nav_link" href="#company">Firma</a></li>
+            <li>
+              <a class="nav_link active" href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="low-header">
+        <img src="src/img/slider3.jpg" class="slider-1 slider-pic" />
+        <img src="src/img/slider4.jpg" class="slider-2 slider-pic" />
+        <img src="src/img/slider6.jpg" class="slider-3 slider-pic" />
+        <img src="src/img/slider7.jpg" class="slider-4 slider-pic" />
+        <div class="low-header--content">
+          <h1>
+            Inwestujemy w
+            <span lang="en-GB" class="highlight-green">Dekarbonizację</span>
+          </h1>
+          <h2>
+            Rozwijamy technologię cynkowo-powietrzną do zasilania urządzeń
+            mobilnych
+          </h2>
+          <div class="eu--img-container">
+            <img
+              src="src/img/znak-eu-white.png"
+              alt="Znak Funduszy Europejskich"
+              class="eu-logo"
+              loading="lazy"
+            />
+            <img
+              src="src/img/znak-eu-white-2.png"
+              alt="Znak Unii Europejskiej"
+              class="eu-logo--second"
+              loading="lazy"
+            />
+          </div>
+          <a class="learn-more" href="#new-stuff" tabindex="0"
+            >Dowiedz się więcej</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <section id="projects">
+        <h2 class="text-centered">
+          <i class="fa-solid fa-pencil"></i> PROJEKTY UNIJNE
+        </h2>
+        <section class="reveal__section section--hidden project--wrapper">
+          <div class="project--logo-container">
+            <img
+              src="src/img/EUsign_2.png"
+              alt="Znak Funduszy Europejskich"
+              class="project--logo-1"
+              loading="lazy"
+            />
+            <img
+              src="src/img/logoRP.png"
+              alt="Znak Rzeczpospolitej"
+              class="project--logo-2"
+              loading="lazy"
+            />
+            <img
+              src="src/img/EUsign.png"
+              alt="Znak Unii Europejskiej"
+              class="project--logo-3"
+              loading="lazy"
+            />
+          </div>
+          <div class="project--text-container">
+            <p class="project--header text-centered">
+              Zakup współfinansowany ze środków Unii Europejsiej w ramach
+              Europejskiego Funduszu Rozwoju Regionalnego
+            </p>
+            <p class="project--number">
+              <span class="highlight">Nr umowy:</span>
+              POIR.03.02.02-00-1926/20
+            </p>
+            <p class="project--title">
+              <span class="highlight">Tytuł projektu:</span> "Wdrożenie
+              technologii produkcji nowej grupy produktowej - baterii
+              przemysłowych cynkowo-powietrznych o elektrolicie alkalicznym"
+            </p>
+          </div>
+        </section>
+      </section>
+      <section class="new-stuff--header">
+        <h2 class="new-stuff--quote">Nowości</h2>
+      </section>
+      <section id="new-stuff">
+        <h2 class="text-centered">
+          <i class="fa-solid fa-circle-exclamation"></i> Baterie typu slim
+        </h2>
+        <div class="new-stuff--wrapper">
+          <div class="new-stuff--description">
+            <img
+              src="src/img/4R25.png"
+              alt="Przekreślona bateria 4R25"
+              class="wrong-battery"
+            />
+            <p>
+              Czas na zmiany w zasilaniu drogowych lamp ostrzegawczych i
+              podobnych urządzeń. Opracowano nową grupę produktową baterii
+              cynkowo-powietrznych zastępującą tradycyjne baterie 4R25.
+            </p>
+          </div>
+          <!--///////////// Progress bars /////////////-->
+          <div class="new-stuff--bars">
+            <h3><i class="fa-solid fa-clock"></i> Czas rozładowania:</h3>
+            <p>Rozładowanie systemem ciągłym - 240 Ω</p>
+            <li>
+              <h4>6SX12<span class="bar-percentage">+250%</span></h4>
+              <span class="bar green"
+                ><span
+                  id="100%"
+                  class="first-bar no-animation"
+                  data-index="0"
+                ></span
+              ></span>
+            </li>
+            <li>
+              <h4 class="grey">4R25</h4>
+              <span class="bar grey"
+                ><span id="40%" class="second-bar no-animation"></span
+              ></span>
+            </li>
+            <h3><i class="fa-solid fa-weight-hanging"></i> Masa:</h3>
+            <li>
+              <h4>
+                6SX12 ~ 250g
+                <span class="bar-percentage">-50%</span>
+              </h4>
+              <span class="bar green"
+                ><span
+                  id="50%"
+                  class="third-bar no-animation"
+                  data-index="1"
+                ></span
+              ></span>
+            </li>
+            <li>
+              <h4 class="grey">4R25 ~ 500g</h4>
+              <span class="bar grey"
+                ><span id="100%" class="fourth-bar no-animation"></span
+              ></span>
+            </li>
+          </div>
+          <!-- /////////////////////////////////////// -->
+          <h3 class="new-stuff--title moved-right text-centered">
+            Czas na baterie typu<br />
+            <span class="highlight-red">SLIM</span>
+          </h3>
+          <img
+            src="src/img/folder-001.png"
+            alt="Zdjęcie baterii 6SX12AH"
+            class="folder"
+            loading="lazy"
+          />
+          <img
+            src="src/img/diagram-1.png"
+            alt="diagram"
+            class="folder"
+            loading="lazy"
+          />
+          <img
+            src="src/img/diagram-2.png"
+            alt="diagram"
+            class="folder"
+            loading="lazy"
+          />
+
+          <img
+            src="src/img/folder-002.png"
+            alt="Trzecia strona ulotki"
+            class="folder"
+            loading="lazy"
+          />
+          <h3 class="new-stuff--title moved-left">Niższe koszty:</h3>
+          <h3 class="new-stuff--title moved-left">-logistyczne</h3>
+          <h3 class="new-stuff--title moved-left">-magazynowania</h3>
+          <h3 class="new-stuff--title moved-left">-transportu</h3>
+          <img
+            src="src/img/folder-003.png"
+            alt="Czwarta strona ulotki"
+            class="folder"
+            loading="lazy"
+          />
+          <h3 class="new-stuff--title moved-right">Dodatkowe korzyści</h3>
+          <img
+            src="src/img/folder-004.png"
+            alt="Czwarta strona ulotki"
+            class="folder"
+            loading="lazy"
+          />
+          <p class="new-stuff--text">
+            Oferujemy nowe baterie pasujące do każdej lampy które są lżejsze
+            oraz wydajniejsze energetycznie. Technologia ich wytwarzania
+            uwzględnia niskoemisyjność, troskę o ochronę planety i przyszłych
+            pokoleń.
+          </p>
+          <p class="new-stuff--availablity-text">
+            Dostępne wersje baterii typu slim:
+          </p>
+          <div class="new-stuff--products">
+            <div class="battery" data-id="23" tabindex="0">
+              <span>6SX6AH</span>
+              <div class="battery--hover --disabled" id="23">
+                <p class="highlight">6SX6AH</p>
+                <div class="battery--hover--img-container">
+                  <img
+                    src="src/img/6SX6.png"
+                    alt="Bateria cynkowo-powietrzna"
+                    class="battery--hover--img"
+                    loading="lazy"
+                  />
+                </div>
+
+                <a
+                  href="/src/pdf/6SX6.pdf"
+                  class="battery--hover--btn"
+                  download="6SX6"
+                  tabindex="0"
+                  >Karta produktu</a
+                >
+                <a
+                  href="/src/pdf/6SX6_safety.pdf"
+                  class="battery--hover--btn"
+                  download="6SX6-safety"
+                  tabindex="0"
+                >
+                  Karta bezpieczeństwa produktu
+                </a>
+              </div>
+            </div>
+            <div class="battery" data-id="20" tabindex="0">
+              <span>6SX12AH</span>
+              <div class="battery--hover --disabled" id="20">
+                <p class="highlight">6SX12AH</p>
+                <div class="battery--hover--img-container">
+                  <img
+                    src="src/img/6SX12.png"
+                    alt="Bateria cynkowo-powietrzna"
+                    class="battery--hover--img"
+                    loading="lazy"
+                  />
+                </div>
+
+                <a
+                  href="/src/pdf/6SX12.pdf"
+                  class="battery--hover--btn"
+                  download="6SX12"
+                  tabindex="0"
+                  >Karta produktu</a
+                >
+                <a
+                  href="/src/pdf/6SX12_safety.pdf"
+                  class="battery--hover--btn"
+                  download="6SX12-safety"
+                  tabindex="0"
+                >
+                  Karta bezpieczeństwa produktu
+                </a>
+              </div>
+            </div>
+            <div class="battery" data-id="21" tabindex="0">
+              <span>6SX18AH</span>
+              <div class="battery--hover --disabled" id="21">
+                <p class="highlight">6SX18AH</p>
+                <div class="battery--hover--img-container">
+                  <img
+                    src="src/img/6SX18.png"
+                    alt="Bateria cynkowo-powietrzna"
+                    class="battery--hover--img"
+                    loading="lazy"
+                  />
+                </div>
+
+                <a
+                  href="/src/pdf/6SX18.pdf"
+                  class="battery--hover--btn"
+                  download="6SX18"
+                  tabindex="0"
+                  >Karta produktu</a
+                >
+                <a
+                  href="/src/pdf/6SX18_safety.pdf"
+                  class="battery--hover--btn"
+                  download="6SX18-safety"
+                  tabindex="0"
+                >
+                  Karta bezpieczeństwa produktu
+                </a>
+              </div>
+            </div>
+            <!-- <div class="battery" data-id="22">
+              <span>6SX25AH</span>
+              <div class="battery--hover --disabled" id="22">
+                <p class="highlight">6SX25AH</p>
+                <div class="battery--hover--img-container">
+                  <img
+                    src="src/img/6SX25.png"
+                    alt="Bateria cynkowo-powietrzna"
+                    class="battery--hover--img"
+                    loading="lazy"
+                  />
+                </div>
+
+                <a
+                  href="/src/pdf/6SX25.pdf"
+                  class="battery--hover--btn"
+                  download="6SX25"
+                  >Karta produktu</a
+                >
+                <a
+                  href="/src/pdf/6SX25_safety.pdf"
+                  class="battery--hover--btn"
+                  download="6SX25-safety"
+                >
+                  Karta bezpieczeństwa produktu
+                </a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="company-view">
+        <h2 class="company-view--quote">Dbamy o przyszłość</h2>
+      </section>
+      <section id="products">
+        <div class="section__title">
+          <h2 class="text-centered">
+            <i class="fa-solid fa-bolt"></i> Produkty
+          </h2>
+        </div>
+        <div>
+          <div class="products--wrapper reveal__section section--hidden">
+            <p>Oferujemy szeroką gamę baterii cynkowo-powietrznych</p>
+            <h3>Baterie do urządzeń drogowych</h3>
+            <div class="products--batteries">
+              <div class="battery" data-id="1" tabindex="0">
+                <span>6SX25AH</span>
+                <div class="battery--hover --disabled" id="1">
+                  <p class="highlight">6SX25AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/6SX25.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <a
+                    href="/src/pdf/6SX25.pdf"
+                    class="battery--hover--btn"
+                    download="6SX25"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/6SX25_safety.pdf"
+                    class="battery--hover--btn"
+                    download="6SX25-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="2" tabindex="0">
+                <span>6SX50AH</span>
+                <div class="battery--hover --disabled" id="2">
+                  <p class="highlight">6SX50AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/6SX50.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/6SX50.pdf"
+                    class="battery--hover--btn"
+                    download="6SX50"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/6SX50_safety.pdf"
+                    class="battery--hover--btn"
+                    download="6SX50-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="3" tabindex="0">
+                <span>6SX60AH</span>
+                <div class="battery--hover --disabled" id="3">
+                  <p class="highlight">6SX60AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/6SX60.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/6SX60.pdf"
+                    class="battery--hover--btn"
+                    download="6SX60"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/6SX60_safety.pdf"
+                    class="battery--hover--btn"
+                    download="6SX60-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="4" tabindex="0">
+                <span>6SX120AH</span>
+                <div class="battery--hover --disabled" id="4">
+                  <p class="highlight">6SX120AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/6SX120.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/6SX120.pdf"
+                    class="battery--hover--btn"
+                    download="6SX120"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/6SX120_safety.pdf"
+                    class="battery--hover--btn"
+                    download="6SX120-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="5" tabindex="0">
+                <span>6SX150AH</span>
+                <div class="battery--hover --disabled" id="5">
+                  <p class="highlight">6SX150AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/6SX150.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/6SX150.pdf"
+                    class="battery--hover--btn"
+                    download="6SX150"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/6SX150_safety.pdf"
+                    class="battery--hover--btn"
+                    download="6SX150-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h3 class="highlight">Baterie do urządzeń rolniczych</h3>
+            <div class="products--batteries">
+              <div class="battery" data-id="6" tabindex="0">
+                <span>9SX55AH</span>
+                <div class="battery--hover --disabled" id="6">
+                  <p class="highlight">9SX55AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/9SX55.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/9SX55.pdf"
+                    class="battery--hover--btn"
+                    download="9SX55"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/9SX55_safety.pdf"
+                    class="battery--hover--btn"
+                    download="9SX55-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="7" tabindex="0">
+                <span>9SX75AH</span>
+                <div class="battery--hover --disabled" id="7">
+                  <p class="highlight">9SX75AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/9SX75.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/9SX75.pdf"
+                    class="battery--hover--btn"
+                    download="9SX75"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/9SX75_safety.pdf"
+                    class="battery--hover--btn"
+                    download="9SX75-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="8" tabindex="0">
+                <span>9SX90AH</span>
+                <div class="battery--hover --disabled" id="8">
+                  <p class="highlight">9SX90AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/9SX90.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/9SX90.pdf"
+                    class="battery--hover--btn"
+                    download="9SX90"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/9SX90_safety.pdf"
+                    class="battery--hover--btn"
+                    download="9SX90-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="9" tabindex="0">
+                <span>9SX130AH</span>
+                <div class="battery--hover --disabled" id="9">
+                  <p class="highlight">9SX130AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/9SX130.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/9SX130.pdf"
+                    class="battery--hover--btn"
+                    download="9SX130"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/9SX130_safety.pdf"
+                    class="battery--hover--btn"
+                    download="9SX130-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="10" tabindex="0">
+                <span>9SX170AH</span>
+                <div class="battery--hover --disabled" id="10">
+                  <p class="highlight">9SX170AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/9SX170.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/9SX170.pdf"
+                    class="battery--hover--btn"
+                    download="9SX170"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/9SX170_safety.pdf"
+                    class="battery--hover--btn"
+                    download="9SX170-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+              <div class="battery" data-id="11" tabindex="0">
+                <span>9SX200AH</span>
+                <div class="battery--hover --disabled" id="11">
+                  <p class="highlight">9SX200AH</p>
+                  <div class="battery--hover--img-container">
+                    <img
+                      src="src/img/9SX200.png"
+                      alt="Bateria cynkowo-powietrzna"
+                      class="battery--hover--img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="/src/pdf/9SX200.pdf"
+                    class="battery--hover--btn"
+                    download="9SX200"
+                    tabindex="0"
+                    >Karta produktu</a
+                  >
+                  <a
+                    href="/src/pdf/9SX200_safety.pdf"
+                    class="battery--hover--btn"
+                    download="9SX200-safety"
+                    tabindex="0"
+                  >
+                    Karta bezpieczeństwa produktu
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="company">
+        <h2 class="text-centered">
+          <i class="fa-solid fa-circle-info"></i> Firma
+        </h2>
+        <div class="reveal__section section--hidden company--wrapper">
+          <p>
+            <span class="highlight">Systemix sp. z o.o.</span> to producent
+            bezobsługowych długodziałających źródeł prądu stałego - baterii
+            przemysłowych.
+          </p>
+          <img
+            src="src/img/company-pic.jpg"
+            alt="Fotografia budynku firmy z lotu ptaka"
+            class="company--image"
+            loading="lazy"
+          />
+        </div>
+        <div
+          class="reveal__section section--hidden company--wrapper wrapper-second"
+        >
+          <h3>
+            Wprowadzamy zmiany w funkcjonowaniu firmy i ofercie produktowej
+            zmniejszające <span class="highlight">ślad węglowy</span>.
+          </h3>
+        </div>
+        <div
+          class="reveal__section section--hidden company--wrapper about-wrapper"
+        >
+          <img
+            src="src/img/company-pic-2.jpg"
+            alt="Fotografia budynku firmy z lotu ptaka"
+            class="company--image"
+            loading="lazy"
+          />
+          <p>
+            Od <span class="highlight">2003</span> roku systematycznie
+            udoskonalamy swoje produkty i roszerzamy ofertę produkowanych
+            wyrobów znajdujących zastosowanie w urządzeniach sygnalizacyjnych,
+            elektryzatorach rolniczych i innych urządzeniach wymagających
+            długiej bezingerencyjnej pracy.
+          </p>
+        </div>
+        <div
+          class="reveal__section section--hidden company--wrapper company--wrapper-second"
+        >
+          <h3>
+            Unowocześniamy, robotyzujemy i automatyzujemy procesy produkcyjne
+            zmniejszając energochłoność, materiałochłonność produktów.
+          </h3>
+        </div>
+        <div class="company--wrapper company--wrapper-second">
+          <img
+            src="src/img/company-pic-3.png"
+            alt="Zdjęcie maszyn"
+            class="company--image"
+            loading="lazy"
+          />
+          <img
+            src="src/img/company-pic-4.png"
+            alt="Zdjęcie maszyn"
+            class="company--image"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <footer>
+        <section id="contact">
+          <div class="footer--wrapper">
+            <div class="footer--contacts">
+              <h3>Adres</h3>
+              <p>SYSTEMIX Sp. z o.o.</p>
+              <p>ul. Lubichowska 176A</p>
+              <p>83-200 Starogard Gdański</p>
+            </div>
+            <div class="footer--contacts">
+              <h3>Kontakt</h3>
+              <p>tel. +48 58/561 48 13</p>
+              <p>fax +48 58/561 48 14</p>
+              <p>biuro@systemix.com.pl</p>
+            </div>
+          </div>
+          <div class="footer--bottom"><h3>Systemix sp. z o.o. ©2023</h3></div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
